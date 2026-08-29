@@ -34,7 +34,11 @@
 
   <section class="hero">
     <div class="hero-media">
-      <video autoplay muted loop playsinline
+      <picture>
+        <source media="(max-width: 700px)" srcset="assets/img/hero-mobile.webp">
+        <img src="assets/img/hero.webp" alt="Metallographic specimen mount labelled FeSi 6.5, Hubert Exp. 6, with sample pairs 1.1+1.2, 2.1+2.2, 3.1+3.2">
+      </picture>
+      <video autoplay muted loop playsinline poster="assets/img/hero.webp"
              aria-label="Smoke-flow validation of 3D-printed inlet gas nozzles for a PBF-LB/M build chamber">
         <source src="assets/video/hero.mp4" type="video/mp4">
       </video>
@@ -99,7 +103,7 @@
       <div class="cards">
 
         <a class="card card-link" href="projects.html#fesi">
-          <div class="thumb"><img src="assets/img/fig-03.webp" alt="As-built and cyclically remelted FeSi6.5 top-layer surfaces side by side"></div>
+          <div class="thumb"><img src="assets/img/fig-03.webp" alt="Etched cross-sections comparing every-layer cyclic remelting with normal build-up"></div>
           <div class="card-body">
             <p class="kicker">Masterarbeit · Process development</p>
             <h3>In-process laser remelting for FeSi6.5 soft magnetic components</h3>
@@ -109,7 +113,7 @@
         </a>
 
         <a class="card card-link" href="projects.html#gasflow">
-          <div class="thumb"><img src="assets/img/fig-08.webp" alt="3D-printed inlet gas nozzle hardware beside its CAD model"></div>
+          <div class="thumb"><img src="assets/img/fig-08.webp" alt="Inlet gas nozzle component as-built with supports, finished, and integrated on the machine"></div>
           <div class="card-body">
             <p class="kicker">Machine development · CFD</p>
             <h3>Inlet gas circulation system for a PBF-LB/M research machine</h3>
@@ -119,7 +123,7 @@
         </a>
 
         <a class="card card-link" href="projects.html#cocr">
-          <div class="thumb"><img src="assets/img/fig-05.webp" alt="AFM pore maps of Co-Cr at the best and worst parameter sets"></div>
+          <div class="thumb"><img src="assets/img/fig-05.webp" alt="AFM pore distribution maps of Co-Cr at the best and worst parameter sets of the L9 array"></div>
           <div class="card-body">
             <p class="kicker">B.E. thesis · Taguchi DoE</p>
             <h3>Porosity minimisation in DMLS cobalt-chromium for medical implants</h3>

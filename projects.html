@@ -57,8 +57,8 @@
         </div>
         <div>
           <figure data-slot="FIG-03">
-            <img src="assets/img/fig-03.webp" alt="Two micrographs at identical magnification: as-built FeSi6.5 top-layer surface on the left, cyclically remelted surface on the right, showing a visibly flatter topography">
-            <figcaption>Top-layer surface before and after cyclic in-process remelting. Sa 4.55 µm → 1.8 µm at full density.</figcaption>
+            <img src="assets/img/fig-03.webp" alt="Four etched cross-section micrographs: every-layer cyclic remelting on the left showing equiaxed grains, normal build-up on the right showing columnar grains, with 100 and 40 micrometre scale bars">
+            <figcaption>Etched cross-sections — every-layer cyclic remelting (left) against normal build-up (right). Columnar grains give way to a continuous equiaxed structure. Sa 4.55 µm → 1.8 µm, at full density.</figcaption>
           </figure>
           <figure data-slot="VID-B" class="wide">
             <video controls preload="none" poster="assets/img/vid-b-poster.jpg">
@@ -121,8 +121,8 @@
       <div class="split rev">
         <div>
           <figure data-slot="FIG-04">
-            <img src="assets/img/fig-04.webp" alt="Etched cross-sections at 20x and 50x magnification comparing non-remelted columnar grains with fully equiaxed grains under every-layer cyclic remelting">
-            <figcaption>Etched cross-sections, cyclic versus non-remelted, 20× and 50×. Columnar grains give way to a continuous equiaxed structure under every-layer remelting.</figcaption>
+            <img src="assets/img/fig-04.webp" alt="Dark-field cross-section of a remelted sample, magnified melt pools with measured remelting depths, and a magnified view of the final exposed layer">
+            <figcaption>Dark-field cross-section, magnified melt pools with measured remelting depths, and the resulting top layer. Penetration held between 50 and 300 µm without destabilising the structure beneath.</figcaption>
           </figure>
         </div>
         <div>
@@ -198,14 +198,22 @@
         <li><strong>Design iteration against simulation.</strong> Ran successive geometry variants through CFD and selected on evidence rather than intuition — the loop that separates a designed component from a fabricated guess.</li>
         <li><strong>Physical validation.</strong> Built printed prototypes of the selected geometry and ran smoke-flow tests on a rig before committing to the machine.</li>
         <li><strong>Thermal control.</strong> Integrated <strong>build platform heating</strong> to reduce thermal gradients, influence nucleation and grain growth, and lower the residual stress and crack risk that brittle FeSi6.5 is most vulnerable to.</li>
-        <li><strong>Manufacture, integration and commissioning.</strong> Fabricated the design, integrated it into the ALC2, and verified operation on live builds — the system subsequently carried the full thesis campaign at argon 4 m/s and &lt; 200 ppm residual oxygen.</li>
+        <li><strong>Manufacture.</strong> Produced the component by PBF-LB/M, monitoring the build live — recoater pass, laser exposure and melt-pool behaviour — against the parameter set on the machine control screen.</li>
+        <li><strong>Integration and commissioning.</strong> Post-processed and integrated the assembly into the ALC2, and verified operation on live builds — the system subsequently carried the full thesis campaign at argon 4 m/s and &lt; 200 ppm residual oxygen.</li>
       </ul>
+
+      <figure data-slot="VID-F" class="wide">
+        <video controls preload="none" poster="assets/img/vid-f-poster.jpg">
+          <source src="assets/video/vid-f-printing.mp4" type="video/mp4">
+        </video>
+        <figcaption>The component being built. Recoater pass, laser exposure and melt pool through the laser-safety window, with the live build parameters on the control screen.</figcaption>
+      </figure>
 
       <div class="split rev">
         <div>
           <figure data-slot="FIG-08">
-            <img src="assets/img/fig-08.webp" alt="The 3D-printed inlet nozzle and diffuser hardware photographed beside its CATIA model">
-            <figcaption>From CAD model to printed prototype to validated hardware.</figcaption>
+            <img src="assets/img/fig-08.webp" alt="Three photographs: the gas inlet component as-built with support structures, the finished component after post-processing, and the assembly integrated on the machine">
+            <figcaption>As-built with supports, finished component, and the assembly integrated on the machine.</figcaption>
           </figure>
         </div>
         <div>
@@ -217,6 +225,7 @@
                 <tr><td data-label="Metric">Flow field</td><td data-label="Result">Recirculation and stagnation zones at the powder-bed plane identified in CFD and designed out</td></tr>
                 <tr><td data-label="Metric">Process atmosphere</td><td data-label="Result">Stable argon flow at <strong>4 m/s</strong> with <strong>&lt; 200 ppm</strong> residual oxygen sustained across full builds</td></tr>
                 <tr><td data-label="Metric">Thermal control</td><td data-label="Result">Build platform heating integrated to influence grain structure formation and reduce thermal gradients</td></tr>
+                <tr><td data-label="Metric">Manufacture</td><td data-label="Result">Component produced by PBF-LB/M and post-processed in-house, with the build monitored live against its parameter set</td></tr>
                 <tr><td data-label="Metric">Delivery</td><td data-label="Result">Designed, simulated, manufactured and integrated — complete component lifecycle on operating research hardware</td></tr>
                 <tr><td data-label="Metric">Downstream validation</td><td data-label="Result">The system carried the entire FeSi6.5 thesis campaign and the resulting peer-reviewed publication</td></tr>
               </tbody>
@@ -251,8 +260,8 @@
         </div>
         <div>
           <figure data-slot="FIG-05">
-            <img src="assets/img/fig-05.webp" alt="Two AFM pore distribution maps of Co-Cr at identical scale, showing the best parameter set at 2.8 percent porosity beside the worst at 27 percent">
-            <figcaption>Co-Cr pore distribution at the best and worst parameter sets of the L9 array — a ~10× spread from parameter choice alone.</figcaption>
+            <img src="assets/img/fig-05.webp" alt="Two AFM pore distribution maps of Co-Cr: sample 6 at 2.8 percent porosity beside sample 8 at 27.06 percent, each labelled with its parameters and scan area">
+            <figcaption>Co-Cr pore distribution at the best and worst parameter sets of the L9 array — a ~10× spread from parameter choice alone. Scan areas differ (5 × 5 µm and 10 × 10 µm) and are labelled on each panel.</figcaption>
           </figure>
         </div>
       </div>
