@@ -31,16 +31,16 @@
 
     <section class="section" style="border:0;padding-bottom:1rem">
       <h1>Projects</h1>
-      <p class="lede">Each project below runs from the technical problem through the engineering approach to a quantified result. Metrics come from the thesis reports; measurement methods are named so the numbers can be checked.</p>
+      <p class="lede">Each project below runs from the technical problem through the engineering approach to a quantified result. Metrics come from the thesis reports; measurement methods are named so the numbers can be checked. <strong>Laser Powder Bed Fusion of Metals (PBF-LB/M)</strong> — also called L-PBF or SLM — builds a part by melting fine metal powder layer by layer with a laser.</p>
     </section>
 
     <!-- ============================ PROJECT 01 ============================ -->
     <article class="project" id="fesi">
       <div class="project-head">
-        <p class="project-num">Project 01 — Masterarbeit · PBF-LB/M process development</p>
+        <p class="project-num">Project 01 — Master's Thesis · PBF-LB/M process development</p>
         <h2>In-Process Laser Remelting for Precise Layer Topography in FeSi6.5 Soft Magnetic Components</h2>
         <p class="facts">
-          <strong>Institution:</strong> Hochschule Aalen — LaserApplication Center (LAZ) · Research programme <strong>SmartPro – Smart-ADD</strong><br>
+          <strong>Institution:</strong> Hochschule Aalen (Aalen University of Applied Sciences) — LaserApplication Center (LAZ) · Research programme <strong>SmartPro – Smart-ADD</strong><br>
           <strong>Machine:</strong> ALC2 × ICM universal laser research system<br>
           <strong>Supervisors:</strong> Prof. Dr. Harald Riegel (first) · Prof. Dr. Dagmar Goll (second)<br>
           <strong>Submitted</strong> September 2025 · <strong>Defended</strong> October 2025 · <strong>Published</strong> in <em>Procedia CIRP</em> 124 (2024)
@@ -164,11 +164,11 @@
     <!-- ============================ PROJECT 02 ============================ -->
     <article class="project" id="gasflow">
       <div class="project-head">
-        <p class="project-num">Project 02 — Machine development · CFD · System integration</p>
+        <p class="project-num">Project 02 — Machine development · Computational Fluid Dynamics (CFD) · System integration</p>
         <h2>Inlet Gas Circulation System for a PBF-LB/M Research Machine</h2>
         <p class="facts">
-          <strong>Institution:</strong> Hochschule Aalen — LaserApplication Center (LAZ) · <strong>Machine:</strong> ALC2<br>
-          <strong>Period:</strong> May 2023 – March 2024<br>
+          <strong>Institution:</strong> Hochschule Aalen (Aalen University of Applied Sciences) — LaserApplication Center (LAZ) · <strong>Machine:</strong> ALC2<br>
+          <strong>Period:</strong> May 2023 – March 2024 — begun as a working student, completed as a research assistant<br>
           <strong>Scope:</strong> Design · CFD analysis · Manufacture · Integration · Commissioning
         </p>
       </div>
@@ -198,8 +198,8 @@
       <h3>Engineering approach &amp; tools</h3>
       <ul>
         <li><strong>Requirements definition.</strong> Established the target velocity envelope over the process zone, the flow direction needed to carry spatter clear of the plate rather than across it, and the geometric envelope imposed by the existing chamber — the system had to fit a machine that already existed.</li>
-        <li><strong>Design (Konstruktion).</strong> Developed inlet nozzle and diffuser geometry in <strong>CATIA V5</strong>, iterating nozzle arrangement, outlet cross-section and flow-straightening features to convert a concentrated inlet stream into an even, directed curtain across the full build area.</li>
-        <li><strong>CFD analysis (Strömungssimulation).</strong> Modelled the chamber flow field in <strong>ANSYS Fluent</strong> — meshing, boundary conditions, turbulence model selection, solution and post-processing. Evaluated velocity contours and streamlines at the powder-bed plane to locate and eliminate recirculation zones and stagnation points where spatter would settle instead of being carried out.</li>
+        <li><strong>Design.</strong> Developed inlet nozzle and diffuser geometry in <strong>CATIA V5</strong>, iterating nozzle arrangement, outlet cross-section and flow-straightening features to convert a concentrated inlet stream into an even, directed curtain across the full build area.</li>
+        <li><strong>CFD analysis.</strong> Modelled the chamber flow field in <strong>ANSYS Fluent</strong> — meshing, boundary conditions, turbulence model selection, solution and post-processing. Evaluated velocity contours and streamlines at the powder-bed plane to locate and eliminate recirculation zones and stagnation points where spatter would settle instead of being carried out.</li>
         <li><strong>Design iteration against simulation.</strong> Ran successive geometry variants through CFD and selected on evidence rather than intuition — the loop that separates a designed component from a fabricated guess.</li>
         <li><strong>Physical validation.</strong> Built printed prototypes of the selected geometry and ran smoke-flow tests on a rig before committing to the machine.</li>
         <li><strong>Thermal control.</strong> Integrated <strong>build platform heating</strong> to reduce thermal gradients, influence nucleation and grain growth, and lower the residual stress and crack risk that brittle FeSi6.5 is most vulnerable to.</li>
@@ -248,7 +248,7 @@
     <!-- ============================ PROJECT 03 ============================ -->
     <article class="project" id="cocr">
       <div class="project-head">
-        <p class="project-num">Project 03 — B.E. thesis · DMLS · Taguchi design of experiments</p>
+        <p class="project-num">Project 03 — B.E. Thesis · Direct Metal Laser Sintering (DMLS) · Taguchi Design of Experiments</p>
         <h2>Porosity Minimisation in DMLS Cobalt-Chromium for Medical Implants</h2>
         <p class="facts">
           <strong>Institution:</strong> Jeppiaar Institute of Technology, Chennai · <strong>Lead author</strong>, four-person project team<br>
@@ -276,7 +276,7 @@
         <li><strong>Taguchi L9 orthogonal array.</strong> Three parameters at three levels — <strong>laser power (170 / 270 / 370 W)</strong>, <strong>scan speed (250 / 350 / 450 mm/s)</strong>, <strong>hatch spacing (0.15 / 0.25 / 0.35 mm)</strong> — in <strong>9 runs instead of the 27</strong> a full factorial demands. A deliberate trade of resolution for feasibility where machine time and powder were the binding constraints.</li>
         <li><strong>Sample manufacture.</strong> Built the full Co-Cr specimen set by DMLS across all nine parameter sets, executed in randomised order to avoid confounding by build drift.</li>
         <li><strong>Multi-method porosity quantification.</strong> Cross-checked porosity by <strong>micro-CT scanning</strong> and <strong>localised mass measurement</strong> rather than relying on a single technique.</li>
-        <li><strong>Nanoscale characterisation.</strong> Used <strong>Atomic Force Microscopy</strong> to map pore distribution, area, volume and perimeter per sample, applying threshold and watershed grain-detection algorithms for automated pore identification.</li>
+        <li><strong>Nanoscale characterisation.</strong> Used <strong>Atomic Force Microscopy (AFM)</strong> to map pore distribution, area, volume and perimeter per sample, applying threshold and watershed grain-detection algorithms for automated pore identification.</li>
         <li><strong>Defect-mechanism reasoning.</strong> Separated <strong>keyhole porosity</strong> (spherical, excessive energy density collapsing the vapour depression) from <strong>lack-of-fusion porosity</strong> (irregular, insufficient melt-pool overlap) — opposite ends of the energy-density scale, requiring opposite corrections.</li>
         <li><strong>Statistical analysis.</strong> Signal-to-noise ratio analysis (smaller-the-better), ANOVA and contour-plot response surfaces in <strong>Minitab</strong>.</li>
       </ul>
@@ -320,7 +320,7 @@
         <table class="stack">
           <thead><tr><th scope="col">Project</th><th scope="col">Scope</th><th scope="col">Period</th></tr></thead>
           <tbody>
-            <tr><td data-label="Project"><strong>Sustainable Product Development using AM</strong></td><td data-label="Scope">Life-cycle comparison of additive vs. conventional manufacturing; DfAM lightweighting and material-efficiency assessment</td><td data-label="Period">2019–2020</td></tr>
+            <tr><td data-label="Project"><strong>Sustainable Product Development using AM</strong></td><td data-label="Scope">Life-cycle comparison of additive vs. conventional manufacturing; Design for Additive Manufacturing (DfAM) lightweighting and material-efficiency assessment</td><td data-label="Period">2019–2020</td></tr>
             <tr><td data-label="Project"><strong>Utility Bicycle — Design and Fabrication</strong></td><td data-label="Scope">Complete mechanical design and build: concept, structural design, fabrication</td><td data-label="Period">2019</td></tr>
             <tr><td data-label="Project"><strong>Concept Vehicle Exterior Design</strong></td><td data-label="Scope">Exterior design for a 2026 concept car; sketching, rendering, surface modelling. <strong>Winning team, ASBC 2019, Bangalore</strong></td><td data-label="Period">2019</td></tr>
             <tr><td data-label="Project"><strong>Robotics &amp; Automation Integration</strong></td><td data-label="Scope">End-to-end automation system development and integration for home and industrial products</td><td data-label="Period">2018</td></tr>

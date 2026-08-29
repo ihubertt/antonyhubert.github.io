@@ -74,9 +74,28 @@ not decoration.
 
 ---
 
+## Language and readability pass
+
+The portfolio now reads for an international audience. All German-language terms are
+translated; every technical acronym is expanded on first use **on each page**, because
+each page is a separate landing point from search:
+
+| Was | Now |
+|---|---|
+| Verfahrensentwicklung / Werkstoffkunde / Konstruktion & FEM/CFD / Fertigungsnähe / Wissenstransfer | Process Development / Materials Characterisation / Design & Simulation / Hands-On Manufacturing / Knowledge Transfer |
+| Masterarbeit (7 uses) | Master's Thesis |
+| Design (Konstruktion) · CFD analysis (Strömungssimulation) | Design · CFD analysis |
+| ANSYS Mechanical / APDL (FEM-Analyse) | ANSYS Mechanical / APDL (FEA) |
+| CGPA 8.5 / 10 | CGPA 8.5 / 10 (Indian scale, 10 = highest) |
+| Hochschule Aalen — LAZ | Hochschule Aalen (Aalen University of Applied Sciences) — LAZ |
+
+PBF-LB/M, DfAM, DoE, SEM, AFM, DMLS and CFD are now spelled out at first appearance on
+every page. The Research page opens with a one-line plain-English definition of the
+process for readers who have never seen a powder-bed machine.
+
 ## The CV
 
-`Antony_Hubert_CV_2026.pdf` — 2 pages, A4, built for ATS parsing:
+`Antony_Hubert_CV_2026.pdf` — 2 pages, A4, portrait top-right:
 
 - Single column, no tables, no text boxes, no graphics, no header/footer
 - Standard section headings (PROFESSIONAL SUMMARY, CORE COMPETENCIES, PROFESSIONAL
@@ -86,6 +105,10 @@ not decoration.
 - Arial / Liberation Sans, embedded, fully selectable — 98 lines extract cleanly
 - Keyword density verified: PBF-LB/M ×7, ANSYS ×4, CATIA ×3, SEM ×3, Taguchi ×2,
   Minitab ×2, Siemens NX ×2
+- **Gas circulation project now spans both roles**, as it actually did: begun under
+  Working Student (requirements, CATIA geometry, ANSYS Fluent analysis), completed under
+  Academic Research Assistant (platform heating, manufacture, integration, commissioning).
+  The Projects page carries the same correction.
 
 The `.docx` is the same document. Some ATS still parse Word more reliably than PDF —
 send the `.docx` when a portal offers the choice, the PDF when emailing a human.
