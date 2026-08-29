@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects — Antony Hubert</title>
+<meta name="description" content="Three engineering projects: FeSi6.5 in-process laser remelting, an inlet gas circulation system for a PBF-LB/M machine, and Taguchi porosity minimisation in DMLS Co-Cr.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap-wide">
+    <a class="brand" href="index.html">Antony Hubert <span>· M.Sc.</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="research.html">Research</a>
+      <a href="expertise.html">Expertise</a>
+      <a href="cv.html">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+
+    <section class="section" style="border:0;padding-bottom:1rem">
+      <h1>Projects</h1>
+      <p class="lede">Each project below runs from the technical problem through the engineering approach to a quantified result. Metrics come from the thesis reports; measurement methods are named so the numbers can be checked.</p>
+    </section>
+
+    <!-- ============================ PROJECT 01 ============================ -->
+    <article class="project" id="fesi">
+      <div class="project-head">
+        <p class="project-num">Project 01 — Masterarbeit · PBF-LB/M process development</p>
+        <h2>In-Process Laser Remelting for Precise Layer Topography in FeSi6.5 Soft Magnetic Components</h2>
+        <p class="facts">
+          <strong>Institution:</strong> Hochschule Aalen — LaserApplication Center (LAZ) · Research programme <strong>SmartPro – Smart-ADD</strong><br>
+          <strong>Machine:</strong> ALC2 × ICM universal laser research system<br>
+          <strong>Supervisors:</strong> Prof. Dr. Harald Riegel (first) · Prof. Dr. Dagmar Goll (second)<br>
+          <strong>Submitted</strong> September 2025 · <strong>Defended</strong> October 2025 · <strong>Published</strong> in <em>Procedia CIRP</em> 124 (2024)
+        </p>
+      </div>
+
+      <div class="split">
+        <div>
+          <h3>Problem statement</h3>
+          <p>Over 40% of the energy lost in an electrical machine is lost to eddy currents. The standard countermeasure is lamination — stacking thin, individually insulated electrical steel sheets so the current has no continuous path. FeSi6.5, high-silicon iron, is the ideal material for this: high electrical resistivity, low coercivity, minimal magnetostriction, and up to 30% lower core losses than conventional silicon steel.</p>
+          <p>It is also so brittle that it cannot be rolled, stamped or cast without cracking. The industry therefore designs motors around what the rolling mill can produce, rather than around what the magnetic circuit actually wants.</p>
+          <p>PBF-LB/M removes the geometric constraint but introduces a new one. As-built layer surfaces are rough (Sa ≈ 4.55 µm), and a rough layer forces a thicker insulating recoat. Thicker insulation means thicker laminations, and thicker laminations bring the eddy-current losses straight back.</p>
+          <p><strong>The task:</strong> establish a PBF-LB/M route for FeSi6.5 that produces deliberately smooth, controlled layer topography — flat enough to carry an ultra-thin insulating layer — while holding full density, without cracking, and without losing dimensional accuracy in an alloy that punishes every one of those mistakes.</p>
+        </div>
+        <div>
+          <figure data-slot="FIG-03">
+            <img src="assets/img/fig-03.webp" alt="Two micrographs at identical magnification: as-built FeSi6.5 top-layer surface on the left, cyclically remelted surface on the right, showing a visibly flatter topography">
+            <figcaption>Top-layer surface before and after cyclic in-process remelting. Sa 4.55 µm → 1.8 µm at full density.</figcaption>
+          </figure>
+          <figure data-slot="VID-B" class="wide">
+            <video controls preload="none" poster="assets/img/vid-b-poster.jpg">
+              <source src="assets/video/vid-b-remelting.mp4" type="video/mp4">
+            </video>
+            <figcaption>The remelting principle: a standard build-up pass (blue, first exposure) followed by a rotated remelting pass (red, second exposure) over the same layer.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <h3>Engineering approach &amp; tools</h3>
+
+      <h4>Phase 1 — Establish the baseline build window</h4>
+      <p>Ran a 4 × 4 parameter matrix over <strong>laser power 200–350 W</strong> against <strong>scan speed 600–900 mm/s</strong>, at constant 80 µm hatch, 80 µm focus diameter, 40 µm layer thickness and 90° bidirectional scan rotation. Sixteen 10 × 10 mm samples at 5 mm spacing to suppress thermal cross-talk, 5–15° platform tilt to prevent recoater collision, argon at 4 m/s and <strong>&lt; 200 ppm residual oxygen</strong>. Identified 150 W as insufficient to melt and 400 W as over-melting, and fixed the working point at <strong>300 W / 800 mm/s ≈ 117 J/mm³</strong>, giving <strong>Sa 7.25 µm at 0.152% porosity</strong>.</p>
+
+      <h4>Phase 2 — Final-layer remelting</h4>
+      <p>Applied a single re-exposure to the top layer only, sweeping <strong>laser power 300–400 W</strong> against <strong>spot diameter 80 / 120 / 160 / 200 µm</strong>, hatch 60 µm, hatch offset 50–150%, rotated 90° from the preceding layer. Two competing failure modes emerged, and separating them quantitatively is what made the window achievable:</p>
+      <ul>
+        <li><strong>Molten-metal deposition at the part edges scales with power intensity</strong> — at 400 W / 160 µm the deposition reached 898 µm at 20.9 kW/mm²; at 300 W it fell to 545 µm at 15.7 kW/mm².</li>
+        <li><strong>Remelting depth scales with areal energy intensity.</strong></li>
+      </ul>
+      <p>Reduced power intensity to suppress edge deposition while independently trimming areal energy density to control penetration depth — decoupling two effects that a single volumetric-energy-density figure conflates and cannot resolve.</p>
+
+      <h4>Phase 3 — Cyclic remelting</h4>
+      <p>Extended remelting from the top layer to the whole build, at intervals of every 1st, 2nd, 3rd and 5th layer, at fixed <strong>325 W / 300 µm spot / 60 µm hatch / 150% hatch offset / 600 and 800 mm/s</strong>, against a non-remelted reference under identical conditions.</p>
+
+      <figure data-slot="VID-C" class="strip banner-strip">
+        <video autoplay muted loop playsinline poster="assets/img/vid-c-poster.jpg"
+               aria-label="Diagram of the four cyclic remelting strategies: every layer, every second, every third and every fifth layer">
+          <source src="assets/video/vid-c-cyclic.mp4" type="video/mp4">
+        </video>
+        <figcaption>The four cyclic strategies tested: remelting every 1st, 2nd, 3rd and 5th layer, against a non-remelted reference.</figcaption>
+      </figure>
+
+      <h4>Verification — performed in-house, end to end</h4>
+      <ul>
+        <li><strong>Areal topography:</strong> KEYENCE VR-3100 one-shot 3D optical profilometer (Sa, elevation maps, line scans).</li>
+        <li><strong>Tactile roughness:</strong> MarSurf M400 (Ra, Rq, Rz, Rt), measured <strong>both parallel and perpendicular to the scan vector</strong> — a directional process produces directional roughness, and a single-direction measurement would have flattered the result.</li>
+        <li><strong>Cross-sections:</strong> Struers Secotom 10 sectioning and Tegramin 30 polishing parallel to the build direction, SiC 50–2000 grit, 3 µm and 1 µm diamond suspension, Co-m3 etch (20–30 s) for Fe-Si; imaged on the Zeiss Axio Imager.Z2 Vario to 500× with ZEN Core quantifying pore size, pore count/mm² and area-fraction porosity by adaptive thresholding.</li>
+        <li><strong>Process hardware:</strong> TRUMPF TruFiber 400 single-mode fibre laser (1075 nm, 400 W) · SCANLAB intelliSCANse 30 scanner · varioSCANde II 40i PR z-shifter with negative defocusing · Autodesk AMCF control · Netfabb 2024 build preparation · hema ICAM weld coaxial monitoring.</li>
+      </ul>
+
+      <h3>Key contribution &amp; results</h3>
+      <div class="table-wrap">
+        <table class="stack">
+          <thead>
+            <tr><th scope="col">Measure</th><th scope="col">No remelting</th><th scope="col">Final-layer remelting</th><th scope="col">Cyclic remelting (every layer)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-label="Measure">Areal roughness Sa</td><td data-label="No remelting">~4.55 µm</td><td data-label="Final-layer">~2.4 µm</td><td data-label="Cyclic"><strong>~1.8 µm</strong></td></tr>
+            <tr><td data-label="Measure">Linear roughness Ra</td><td data-label="No remelting">&gt; 2.5 µm</td><td data-label="Final-layer">~1.5 µm</td><td data-label="Cyclic"><strong>&lt; 1.0 µm</strong></td></tr>
+            <tr><td data-label="Measure">Grain morphology</td><td data-label="No remelting">Columnar</td><td data-label="Final-layer">Partially equiaxed</td><td data-label="Cyclic"><strong>Fully equiaxed</strong></td></tr>
+            <tr><td data-label="Measure">Microstructural uniformity</td><td data-label="No remelting">Moderate</td><td data-label="Final-layer">Improved</td><td data-label="Cyclic"><strong>Excellent</strong></td></tr>
+            <tr><td data-label="Measure">Thermal stability</td><td data-label="No remelting">Good</td><td data-label="Final-layer">Stable</td><td data-label="Cyclic"><strong>Very stable</strong></td></tr>
+            <tr class="t-hi"><td data-label="Measure">Overall improvement</td><td data-label="No remelting">—</td><td data-label="Final-layer">+38% smoother</td><td data-label="Cyclic">+60% smoother</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="split rev">
+        <div>
+          <figure data-slot="FIG-04">
+            <img src="assets/img/fig-04.webp" alt="Etched cross-sections at 20x and 50x magnification comparing non-remelted columnar grains with fully equiaxed grains under every-layer cyclic remelting">
+            <figcaption>Etched cross-sections, cyclic versus non-remelted, 20× and 50×. Columnar grains give way to a continuous equiaxed structure under every-layer remelting.</figcaption>
+          </figure>
+        </div>
+        <div>
+          <h4>Additional quantified outcomes</h4>
+          <div class="table-wrap">
+            <table class="t-key stack">
+              <tbody>
+                <tr><td data-label="Metric">Porosity at the optimised build point</td><td data-label="Result"><strong>0.152%</strong> — essentially full density</td></tr>
+                <tr><td data-label="Metric">Remelting depth, controlled range</td><td data-label="Result">50–300 µm, stable and reproducible across intervals</td></tr>
+                <tr><td data-label="Metric">Cracking / delamination</td><td data-label="Result">None observed in any cyclically remelted sample</td></tr>
+                <tr><td data-label="Metric">Embrittlement</td><td data-label="Result">No increase, despite repeated thermal cycling of a brittle alloy</td></tr>
+                <tr><td data-label="Metric">Dimensional accuracy</td><td data-label="Result">Maintained</td></tr>
+                <tr><td data-label="Metric">Parameter combinations characterised</td><td data-label="Result">30+, across three experimental phases</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="note">
+        <span class="label">The finding that matters</span>
+        <p>Remelting is normally used to raise density. Here it works as a <strong>microstructure engineering tool</strong>: applied every layer, it repeatedly disrupts directional solidification, converting columnar grains to a continuous equiaxed structure through the full part height. Frequency is the control variable — every layer gives full transition, every 3rd layer at 600 mm/s gives partial transition, every 5th layer gives essentially none. That is a dial an engineer can set.</p>
+      </div>
+
+      <div class="pub">
+        <span class="label">Publication</span>
+        Hofele M., <strong>Antony H.</strong>, Kolb D., Riegel H. (2024). <em>Production of soft magnetic FeSi6.5 parts with precise layer topography using integrated laser remelting at PBF-LB/M to induce multi-material lamination.</em> <strong>Procedia CIRP 124</strong>, pp. 6–11.
+        <br>DOI: <a href="https://doi.org/10.1016/j.procir.2024.08.060">10.1016/j.procir.2024.08.060</a>
+      </div>
+
+      <p><a class="btn ghost" href="research.html">Read the full research deep-dive →</a></p>
+    </article>
+
+    <!-- ============================ PROJECT 02 ============================ -->
+    <article class="project" id="gasflow">
+      <div class="project-head">
+        <p class="project-num">Project 02 — Machine development · CFD · System integration</p>
+        <h2>Inlet Gas Circulation System for a PBF-LB/M Research Machine</h2>
+        <p class="facts">
+          <strong>Institution:</strong> Hochschule Aalen — LaserApplication Center (LAZ) · <strong>Machine:</strong> ALC2<br>
+          <strong>Period:</strong> May 2023 – March 2024<br>
+          <strong>Scope:</strong> Design · CFD analysis · Manufacture · Integration · Commissioning
+        </p>
+      </div>
+
+      <div class="split">
+        <div>
+          <h3>Problem statement</h3>
+          <p>In PBF-LB/M the laser vaporises metal, ejecting spatter and condensate into the build chamber. Whatever is not swept away lands back on the powder bed and is fused into the next layer as a defect, while airborne particulate attenuates and scatters the incoming beam.</p>
+          <p>On the ALC2 — a self-built research machine carrying the FeSi6.5 work — inconsistent inlet flow meant part quality depended partly on <em>where on the plate the sample sat</em>. That is fatal to a parameter study which has to attribute every difference to the parameter under test.</p>
+          <p>A second, coupled problem: FeSi6.5 is crack-sensitive. Solidification behaviour and grain structure depend on the thermal field, and an unheated build platform gives large thermal gradients and little control over how grains nucleate and grow.</p>
+          <p><strong>The task:</strong> design an inlet gas circulation system that actively evacuates molten spatter away from the build platform rather than letting it settle back onto the bed, and combine it with build platform heating to influence grain structure formation — together enabling thermally controlled, precise manufacturing.</p>
+        </div>
+        <div>
+          <figure data-slot="VID-D" class="wide">
+            <video controls preload="none" poster="assets/img/vid-d-poster.jpg">
+              <source src="assets/video/vid-d-smoketest.mp4" type="video/mp4">
+            </video>
+            <figcaption>Live smoke-flow validation of the 3D-printed inlet nozzles on the test rig, confirming the directed gas curtain predicted in CFD.</figcaption>
+          </figure>
+          <figure data-slot="FIG-07">
+            <img src="assets/img/fig-07.webp" alt="ANSYS velocity streamline plot through the inlet nozzle and diffuser assembly, scale 0 to 4.65 metres per second">
+            <figcaption>Velocity streamlines through the inlet nozzle and diffuser assembly (ANSYS Fluent, 0–4.65 m/s). Design variants were selected on simulation evidence before fabrication.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <h3>Engineering approach &amp; tools</h3>
+      <ul>
+        <li><strong>Requirements definition.</strong> Established the target velocity envelope over the process zone, the flow direction needed to carry spatter clear of the plate rather than across it, and the geometric envelope imposed by the existing chamber — the system had to fit a machine that already existed.</li>
+        <li><strong>Design (Konstruktion).</strong> Developed inlet nozzle and diffuser geometry in <strong>CATIA V5</strong>, iterating nozzle arrangement, outlet cross-section and flow-straightening features to convert a concentrated inlet stream into an even, directed curtain across the full build area.</li>
+        <li><strong>CFD analysis (Strömungssimulation).</strong> Modelled the chamber flow field in <strong>ANSYS Fluent</strong> — meshing, boundary conditions, turbulence model selection, solution and post-processing. Evaluated velocity contours and streamlines at the powder-bed plane to locate and eliminate recirculation zones and stagnation points where spatter would settle instead of being carried out.</li>
+        <li><strong>Design iteration against simulation.</strong> Ran successive geometry variants through CFD and selected on evidence rather than intuition — the loop that separates a designed component from a fabricated guess.</li>
+        <li><strong>Physical validation.</strong> Built printed prototypes of the selected geometry and ran smoke-flow tests on a rig before committing to the machine.</li>
+        <li><strong>Thermal control.</strong> Integrated <strong>build platform heating</strong> to reduce thermal gradients, influence nucleation and grain growth, and lower the residual stress and crack risk that brittle FeSi6.5 is most vulnerable to.</li>
+        <li><strong>Manufacture, integration and commissioning.</strong> Fabricated the design, integrated it into the ALC2, and verified operation on live builds — the system subsequently carried the full thesis campaign at argon 4 m/s and &lt; 200 ppm residual oxygen.</li>
+      </ul>
+
+      <div class="split rev">
+        <div>
+          <figure data-slot="FIG-08">
+            <img src="assets/img/fig-08.webp" alt="The 3D-printed inlet nozzle and diffuser hardware photographed beside its CATIA model">
+            <figcaption>From CAD model to printed prototype to validated hardware.</figcaption>
+          </figure>
+        </div>
+        <div>
+          <h3>Key contribution &amp; results</h3>
+          <div class="table-wrap">
+            <table class="t-key stack">
+              <tbody>
+                <tr><td data-label="Metric">Spatter management</td><td data-label="Result">Active evacuation of molten spatter away from the build platform, instead of redeposition onto the powder bed</td></tr>
+                <tr><td data-label="Metric">Flow field</td><td data-label="Result">Recirculation and stagnation zones at the powder-bed plane identified in CFD and designed out</td></tr>
+                <tr><td data-label="Metric">Process atmosphere</td><td data-label="Result">Stable argon flow at <strong>4 m/s</strong> with <strong>&lt; 200 ppm</strong> residual oxygen sustained across full builds</td></tr>
+                <tr><td data-label="Metric">Thermal control</td><td data-label="Result">Build platform heating integrated to influence grain structure formation and reduce thermal gradients</td></tr>
+                <tr><td data-label="Metric">Delivery</td><td data-label="Result">Designed, simulated, manufactured and integrated — complete component lifecycle on operating research hardware</td></tr>
+                <tr><td data-label="Metric">Downstream validation</td><td data-label="Result">The system carried the entire FeSi6.5 thesis campaign and the resulting peer-reviewed publication</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="note">
+        <span class="label">Why this project is the differentiator</span>
+        <p>Most AM engineers optimise parameters <em>on</em> a machine. This work improved the machine itself, from requirement through CAD, CFD, prototype, physical validation, fabrication and commissioning — and the proof that it worked is that the research it enabled was published.</p>
+      </div>
+    </article>
+
+    <!-- ============================ PROJECT 03 ============================ -->
+    <article class="project" id="cocr">
+      <div class="project-head">
+        <p class="project-num">Project 03 — B.E. thesis · DMLS · Taguchi design of experiments</p>
+        <h2>Porosity Minimisation in DMLS Cobalt-Chromium for Medical Implants</h2>
+        <p class="facts">
+          <strong>Institution:</strong> Jeppiaar Institute of Technology, Chennai · <strong>Lead author</strong>, four-person project team<br>
+          <strong>Period:</strong> February – May 2021
+        </p>
+      </div>
+
+      <div class="split">
+        <div>
+          <h3>Problem statement</h3>
+          <p>Co-Cr is a standard alloy for load-bearing implants — hip and knee joints, dental bridgework, stents — because it is biocompatible, corrosion-resistant and hard. Producing it by DMLS unlocks patient-specific geometry.</p>
+          <p>But porosity in an implant is not cosmetic: pores are fatigue crack initiation sites in a component required to survive millions of load cycles inside a human body, and Co-Cr already has low ductility.</p>
+          <p><strong>The task:</strong> determine which DMLS parameters actually govern porosity in Co-Cr, rank them by influence, and identify the low-porosity operating region — using a statistically structured method rather than an unaffordable full-factorial campaign.</p>
+        </div>
+        <div>
+          <figure data-slot="FIG-05">
+            <img src="assets/img/fig-05.webp" alt="Two AFM pore distribution maps of Co-Cr at identical scale, showing the best parameter set at 2.8 percent porosity beside the worst at 27 percent">
+            <figcaption>Co-Cr pore distribution at the best and worst parameter sets of the L9 array — a ~10× spread from parameter choice alone.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <h3>Engineering approach &amp; tools</h3>
+      <ul>
+        <li><strong>Taguchi L9 orthogonal array.</strong> Three parameters at three levels — <strong>laser power (170 / 270 / 370 W)</strong>, <strong>scan speed (250 / 350 / 450 mm/s)</strong>, <strong>hatch spacing (0.15 / 0.25 / 0.35 mm)</strong> — in <strong>9 runs instead of the 27</strong> a full factorial demands. A deliberate trade of resolution for feasibility where machine time and powder were the binding constraints.</li>
+        <li><strong>Sample manufacture.</strong> Built the full Co-Cr specimen set by DMLS across all nine parameter sets, executed in randomised order to avoid confounding by build drift.</li>
+        <li><strong>Multi-method porosity quantification.</strong> Cross-checked porosity by <strong>micro-CT scanning</strong> and <strong>localised mass measurement</strong> rather than relying on a single technique.</li>
+        <li><strong>Nanoscale characterisation.</strong> Used <strong>Atomic Force Microscopy</strong> to map pore distribution, area, volume and perimeter per sample, applying threshold and watershed grain-detection algorithms for automated pore identification.</li>
+        <li><strong>Defect-mechanism reasoning.</strong> Separated <strong>keyhole porosity</strong> (spherical, excessive energy density collapsing the vapour depression) from <strong>lack-of-fusion porosity</strong> (irregular, insufficient melt-pool overlap) — opposite ends of the energy-density scale, requiring opposite corrections.</li>
+        <li><strong>Statistical analysis.</strong> Signal-to-noise ratio analysis (smaller-the-better), ANOVA and contour-plot response surfaces in <strong>Minitab</strong>.</li>
+      </ul>
+
+      <div class="split rev">
+        <div>
+          <figure data-slot="FIG-06">
+            <img src="assets/img/fig-06.webp" alt="Minitab main effects plot for signal-to-noise ratios showing scan speed with the steepest response">
+            <figcaption>S/N response: scan speed dominates porosity (Δ 9.31) over laser power (3.87) and hatch spacing (3.31).</figcaption>
+          </figure>
+        </div>
+        <div>
+          <h3>Key contribution &amp; results</h3>
+          <div class="table-wrap">
+            <table class="t-key stack">
+              <tbody>
+                <tr><td data-label="Metric">Experimental efficiency</td><td data-label="Result"><strong>9 runs instead of 27</strong> — 67% less machine time and powder</td></tr>
+                <tr><td data-label="Metric">Porosity range across the array</td><td data-label="Result"><strong>2.8% to 27.06%</strong> — nearly a <strong>10× spread</strong> from parameter choice alone</td></tr>
+                <tr><td data-label="Metric">Best measured result</td><td data-label="Result"><strong>2.8% porosity</strong> at 270 W / 450 mm/s / 0.15 mm hatch</td></tr>
+                <tr><td data-label="Metric">Dominant factor</td><td data-label="Result"><strong>Scan speed</strong> — S/N delta 9.31, against 3.87 for laser power and 3.31 for hatch spacing</td></tr>
+                <tr><td data-label="Metric">Factor ranking</td><td data-label="Result">Scan speed (1) → Laser power (2) → Hatch spacing (3)</td></tr>
+                <tr><td data-label="Metric">Characterisation</td><td data-label="Result">Micro-CT, localised mass measurement and AFM pore mapping, cross-validated</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="note">
+        <span class="label">The engineering conclusion</span>
+        <p>Scan speed dominates porosity in DMLS Co-Cr by roughly 2.5× over the next factor — which is not the intuitive answer, since laser power is the parameter most operators reach for first. Establishing that ranking is what makes the process controllable: it tells you which dial to turn.</p>
+      </div>
+
+      <p><strong>Why this project still matters.</strong> It is where the method was set. Orthogonal design, cross-validated measurement, defect-mechanism reasoning rather than parameter guesswork — the same discipline produced the published FeSi6.5 result four years later on a harder alloy and a harder objective. It also establishes credibility in a second regulated field: medical technology.</p>
+    </article>
+
+    <!-- ============================ FURTHER WORK ============================ -->
+    <section class="section">
+      <h2>Further project work</h2>
+      <div class="table-wrap">
+        <table class="stack">
+          <thead><tr><th scope="col">Project</th><th scope="col">Scope</th><th scope="col">Period</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Project"><strong>Sustainable Product Development using AM</strong></td><td data-label="Scope">Life-cycle comparison of additive vs. conventional manufacturing; DfAM lightweighting and material-efficiency assessment</td><td data-label="Period">2019–2020</td></tr>
+            <tr><td data-label="Project"><strong>Utility Bicycle — Design and Fabrication</strong></td><td data-label="Scope">Complete mechanical design and build: concept, structural design, fabrication</td><td data-label="Period">2019</td></tr>
+            <tr><td data-label="Project"><strong>Concept Vehicle Exterior Design</strong></td><td data-label="Scope">Exterior design for a 2026 concept car; sketching, rendering, surface modelling. <strong>Winning team, ASBC 2019, Bangalore</strong></td><td data-label="Period">2019</td></tr>
+            <tr><td data-label="Project"><strong>Robotics &amp; Automation Integration</strong></td><td data-label="Scope">End-to-end automation system development and integration for home and industrial products</td><td data-label="Period">2018</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h2>Let's discuss where this fits your team.</h2>
+        <p>I am seeking a <strong>process, application or R&amp;D engineering role in metal additive manufacturing</strong> with a German manufacturer, machine builder or research-driven industrial group, and I am open to relocation throughout Germany.</p>
+        <div class="btn-row">
+          <a class="btn" href="mailto:antonyhubert03@gmail.com">Request a technical discussion</a>
+          <a class="btn ghost" href="assets/Antony_Hubert_CV_2026.pdf">Download CV (PDF)</a>
+        </div>
+        <p class="small muted">Full parameter studies, micrographs, topography data and build documentation are available on request.</p>
+      </div>
+      <div>
+        <ul class="contact-list">
+          <li><span class="k">Email</span><span class="v"><a href="mailto:antonyhubert03@gmail.com">antonyhubert03@gmail.com</a></span></li>
+          <li><span class="k">Phone</span><span class="v"><a href="tel:+4915783442831">+49 157 8344 2831</a></span></li>
+          <li><span class="k">LinkedIn</span><span class="v"><a href="https://www.linkedin.com/in/antony-hubert" rel="me">linkedin.com/in/antony-hubert</a></span></li>
+          <li><span class="k">Publication</span><span class="v"><a href="https://doi.org/10.1016/j.procir.2024.08.060">10.1016/j.procir.2024.08.060</a></span></li>
+          <li><span class="k">Location</span><span class="v">Aalen, Baden-Württemberg</span></li>
+          <li><span class="k">Authorisation</span><span class="v">Job Seeker Visa · EU Blue Card eligible</span></li>
+          <li><span class="k">Availability</span><span class="v">Immediate</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>Antony Hubert · M.Sc. Mechanical Engineer · Metal Additive Manufacturing · Aalen, Germany</span>
+      <span>Languages: English C1 · German B1→B2 · Tamil C2</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/site.js"></script>
+</body>
+</html>

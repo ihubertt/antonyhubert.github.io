@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research — Antony Hubert</title>
+<meta name="description" content="Masterarbeit deep-dive: optimisation of layer surface topography in FeSi6.5 soft magnetic components through in-process laser remelting in PBF-LB/M. Published in Procedia CIRP 124 (2024).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap-wide">
+    <a class="brand" href="index.html">Antony Hubert <span>· M.Sc.</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="research.html" aria-current="page">Research</a>
+      <a href="expertise.html">Expertise</a>
+      <a href="cv.html">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+
+    <section class="section" style="border:0">
+      <p class="project-num">Masterarbeit — research deep-dive</p>
+      <h1>Optimization of Layer Surface Topography in FeSi6.5 Soft Magnetic Components Through In-Process Laser Remelting in the PBF-LB/M Additive Manufacturing Process</h1>
+      <p class="facts muted">
+        <strong>M.Sc. Advanced Materials and Manufacturing</strong> — Faculty of Mechanical Engineering and Materials Technology, Hochschule Aalen<br>
+        Conducted at the <strong>LaserApplication Center (LAZ)</strong> within the <strong>SmartPro – Smart-ADD</strong> research programme<br>
+        First supervisor: <strong>Prof. Dr. Harald Riegel</strong> · Second supervisor: <strong>Prof. Dr. Dagmar Goll</strong><br>
+        Submitted September 2025 · Defended October 2025
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Why this problem</h2>
+      <div class="table-wrap">
+        <table class="stack">
+          <tbody>
+            <tr><td data-label="Driver">The EU ends new combustion-engine sales in <strong>2035</strong></td><td data-label="Consequence">Every replacement drivetrain needs a soft magnetic core</td></tr>
+            <tr><td data-label="Driver"><strong>40–100 kg</strong> of soft magnetic material per EV motor</td><td data-label="Consequence">Magnets exceed <strong>60%</strong> of the total mass of motors, generators and transformers</td></tr>
+            <tr><td data-label="Driver"><strong>40–50%</strong> of total energy losses in these machines are <strong>eddy-current losses</strong></td><td data-label="Consequence">The single largest addressable loss mechanism</td></tr>
+            <tr><td data-label="Driver"><strong>FeSi6.5 cuts core losses by up to 30%</strong> vs. conventional silicon steel</td><td data-label="Consequence">And it cannot be rolled, stamped or stacked — which is why nobody uses it</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>That gap is the entire justification for the work: <strong>the best available soft magnetic alloy is locked out of production by its own brittleness.</strong> Additive manufacturing is the only route that does not require the material to survive deformation.</p>
+
+      <div class="split">
+        <div>
+          <figure data-slot="FIG-12">
+            <img src="assets/img/fig-12.webp" alt="Diagram of conventional stamping and sheet-stacking processes used to make laminated magnetic cores">
+            <figcaption>Conventional routes — stamping and sheet stacking — crack FeSi6.5. The best soft magnetic alloy is locked out of production by its own brittleness.</figcaption>
+          </figure>
+        </div>
+        <div>
+          <figure data-slot="VID-E" class="wide">
+            <video controls preload="none" poster="assets/img/vid-e-poster.jpg">
+              <source src="assets/video/vid-e-process.mp4" type="video/mp4">
+            </video>
+            <figcaption>The PBF-LB/M process: layer-by-layer melting and solidification of metal powder, with the laser scanning a cross-section of the part.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Objective</h2>
+      <p class="lede">Establish a reproducible PBF-LB/M process for <strong>FeSi6.5</strong> that yields precisely controlled layer surface topography — smooth enough to carry the ultra-thin insulating layers that multi-material lamination requires — at full density, without cracking, and without sacrificing dimensional accuracy.</p>
+      <p>The engineering question underneath it: <em>can additive manufacturing produce a laminated magnetic core in an alloy that cannot be made into sheet at all?</em></p>
+    </section>
+
+    <section class="section">
+      <h2>Methodology</h2>
+      <p>The work was structured as three sequential tasks, each gating the next.</p>
+
+      <h3>1 — Identify the parameters governing track stability</h3>
+      <p>Establish how laser power, scan speed, hatch strategy and overlap determine melt-pool regularity and defect formation, and fix a build window producing uniform, dense layers.</p>
+      <p class="muted"><strong>Outcome:</strong> 300 W / 800 mm/s, 117 J/mm³, Sa 7.25 µm, 0.152% porosity.</p>
+
+      <h3>2 — Develop and assess remelting strategies</h3>
+      <p>Test single-pass and cyclic remelting, quantifying roughness reduction, melt-pool modification and — critically — the <em>absence</em> of new defects: porosity, cracks, material removal.</p>
+      <p class="muted"><strong>Outcome:</strong> final-layer remelting +38%, cyclic remelting +60%.</p>
+
+      <h3>3 — Position the result for laminated architectures</h3>
+      <p>Although the thesis builds single-material FeSi6.5, frame the findings against multi-material lamination, where alternating magnetic and insulating layers interrupt eddy-current paths. Thinner layers mean lower losses; surfaces smooth enough for ultra-thin layering are the prerequisite.</p>
+    </section>
+
+    <section class="section">
+      <h2>Innovation &amp; key findings</h2>
+
+      <div class="split">
+        <div>
+          <h3>Finding 1 — Roughness</h3>
+          <p>Cyclic in-process remelting held in a stable conduction melt regime reduced areal roughness from <strong>Sa 4.55 µm to ~1.8 µm (~60%)</strong> and linear roughness from <strong>Ra &gt; 2.5 µm to below 1.0 µm</strong>, at full density and with no cracking or delamination in any sample.</p>
+
+          <h3>Finding 2 — Microstructure, and this is the novel part</h3>
+          <p>Remelting is conventionally a densification treatment. Applied cyclically, it becomes a <strong>microstructure engineering tool</strong>: repeated energy input disrupts directional solidification, driving a <strong>columnar-to-equiaxed transition</strong> continuously through the part height.</p>
+          <p>Remelting <em>frequency</em> is the control variable — every layer produces full transition, every 3rd layer at 600 mm/s produces partial transition, every 5th layer produces essentially none. Grain morphology becomes a process setting rather than an outcome.</p>
+        </div>
+        <div>
+          <figure data-slot="FIG-13">
+            <img src="assets/img/fig-13.webp" alt="Three charts showing areal roughness from the Keyence profilometer and linear roughness from both the Keyence and MarSurf instruments across all cyclic remelting samples">
+            <figcaption>Roughness validated on two independent instruments, measured parallel and perpendicular to the scan vector.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <h3>Finding 3 — It does not embrittle the alloy</h3>
+      <p>The decisive negative result. Repeated thermal cycling of FeSi6.5 could reasonably be expected to crack it. It did not — all specimens remained dense and crack-free, and dimensional accuracy held. Without this, the method would be an academic curiosity.</p>
+
+      <div class="split rev">
+        <div>
+          <figure data-slot="FIG-14">
+            <img src="assets/img/fig-14.webp" alt="Micrographs of molten metal deposition at sample edges at four power intensities, with measured deposition heights">
+            <figcaption>Edge deposition scales with power intensity (898 µm at 20.9 kW/mm² → 545 µm at 15.7 kW/mm²); remelting depth scales with areal energy intensity.</figcaption>
+          </figure>
+        </div>
+        <div>
+          <h3>Finding 4 — Decoupling two effects that look like one</h3>
+          <p>Molten-metal deposition at part edges scales with <strong>power intensity</strong>, while remelting depth scales with <strong>areal energy intensity</strong>. Recognising these as separate levers is what made a stable window achievable — a single volumetric-energy-density figure conflates them and cannot resolve the trade-off.</p>
+          <p>This is the difference between tuning a process and understanding it.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Practical application for industry</h2>
+
+      <div class="split">
+        <div>
+          <div class="table-wrap">
+            <table class="t-key stack">
+              <tbody>
+                <tr><td data-label="Sector">E-mobility &amp; traction drives</td><td data-label="Application">Laminated rotor and stator geometries with lower eddy-current losses — including internal cooling channels and topology-optimised flux paths that sheet stacking cannot produce</td></tr>
+                <tr><td data-label="Sector">Transformers &amp; inductors</td><td data-label="Application">High-silicon-iron cores in geometries unavailable to conventional lamination</td></tr>
+                <tr><td data-label="Sector">Electrical machine development</td><td data-label="Application">Rapid iteration of magnetic-circuit geometry with no lamination tooling — a genuine functional prototype route</td></tr>
+                <tr><td data-label="Sector">Metal AM process engineering</td><td data-label="Application">Conduction-regime cyclic remelting transfers to any alloy where layer topography, surface finish, internal interface quality or grain morphology is the governing requirement</td></tr>
+                <tr><td data-label="Sector">Brittle-alloy processing generally</td><td data-label="Application">A scalable AM route for materials that cannot survive conventional forming</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div>
+          <figure data-slot="FIG-09">
+            <img src="assets/img/fig-09.webp" alt="Schematic of alternating magnetic and insulating layers forming a laminated core with minimal layer thickness">
+            <figcaption>Flat surfaces enable thinner insulating layers, which cut eddy-current losses. FeSi6.5 cannot be rolled into sheet — additive lamination reaches what stacking cannot.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <p>The process knowledge developed here has already supported fabrication of larger components exceeding 50 layers in ongoing university projects, validating the scalability of the optimised parameters.</p>
+    </section>
+
+    <section class="section">
+      <h2>Future work</h2>
+      <p>Integrate multi-material lamination with insulating phases · implement real-time melt-pool monitoring with adaptive laser control · conduct direct magnetic property testing (permeability, coercivity, core loss) · extend the approach to Fe-Co and Fe-Ni soft magnetic alloys · investigate post-build heat treatment for stress relief and enhanced magnetic softness.</p>
+
+      <div class="note">
+        <span class="label">What I bring from this work</span>
+        <p>The ability to take an alloy with no stable process, build a documented process window from first principles, verify it with my own metallography and metrology, identify the physical mechanism rather than just the correlation, and write it up to a standard that passes peer review.</p>
+      </div>
+
+      <div class="pub">
+        <span class="label">Publication</span>
+        Hofele M., <strong>Antony H.</strong>, Kolb D., Riegel H. (2024). <em>Production of soft magnetic FeSi6.5 parts with precise layer topography using integrated laser remelting at PBF-LB/M to induce multi-material lamination.</em> <strong>Procedia CIRP 124</strong>, pp. 6–11.
+        <br>DOI: <a href="https://doi.org/10.1016/j.procir.2024.08.060">10.1016/j.procir.2024.08.060</a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h2>Let's discuss where this fits your team.</h2>
+        <p>I am seeking a <strong>process, application or R&amp;D engineering role in metal additive manufacturing</strong> with a German manufacturer, machine builder or research-driven industrial group, and I am open to relocation throughout Germany.</p>
+        <div class="btn-row">
+          <a class="btn" href="mailto:antonyhubert03@gmail.com">Request a technical discussion</a>
+          <a class="btn ghost" href="assets/Antony_Hubert_CV_2026.pdf">Download CV (PDF)</a>
+        </div>
+        <p class="small muted">Full parameter studies, micrographs, topography data and build documentation are available on request.</p>
+      </div>
+      <div>
+        <ul class="contact-list">
+          <li><span class="k">Email</span><span class="v"><a href="mailto:antonyhubert03@gmail.com">antonyhubert03@gmail.com</a></span></li>
+          <li><span class="k">Phone</span><span class="v"><a href="tel:+4915783442831">+49 157 8344 2831</a></span></li>
+          <li><span class="k">LinkedIn</span><span class="v"><a href="https://www.linkedin.com/in/antony-hubert" rel="me">linkedin.com/in/antony-hubert</a></span></li>
+          <li><span class="k">Publication</span><span class="v"><a href="https://doi.org/10.1016/j.procir.2024.08.060">10.1016/j.procir.2024.08.060</a></span></li>
+          <li><span class="k">Location</span><span class="v">Aalen, Baden-Württemberg</span></li>
+          <li><span class="k">Authorisation</span><span class="v">Job Seeker Visa · EU Blue Card eligible</span></li>
+          <li><span class="k">Availability</span><span class="v">Immediate</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>Antony Hubert · M.Sc. Mechanical Engineer · Metal Additive Manufacturing · Aalen, Germany</span>
+      <span>Languages: English C1 · German B1→B2 · Tamil C2</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/site.js"></script>
+</body>
+</html>
