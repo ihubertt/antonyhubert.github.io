@@ -81,4 +81,67 @@
       if (!v || v.classList.contains("hidden")) h.classList.add("no-media");
     });
   }
+
+  /* ---------- Click-to-zoom ----------
+     Opens the figure at its full pixel size so labels, axes and scale bars are
+     readable. Click anywhere, press Escape, or use Close to dismiss. */
+  var figs = [].slice.call(document.querySelectorAll("figure[data-slot] img"));
+  if (figs.length) {
+    var lb = document.createElement("div");
+    lb.className = "lb";
+    lb.setAttribute("role", "dialog");
+    lb.setAttribute("aria-modal", "true");
+    lb.innerHTML = '<div class="lb-bar"><span class="cap"></span>' +
+                   '<button type="button" data-fit>Fit to width</button>' +
+                   '<button type="button" data-close>Close</button></div><img alt="">';
+    document.body.appendChild(lb);
+    var lbImg = lb.querySelector("img"),
+        lbCap = lb.querySelector(".cap"),
+        fitBtn = lb.querySelector("[data-fit]"),
+        last = null, fitted = false;
+
+    function setFit(on) {
+      fitted = on;
+      lbImg.style.width = on ? "100%" : "";
+      lbImg.style.maxWidth = on ? "1600px" : "none";
+      fitBtn.textContent = on ? "Actual size" : "Fit to width";
+    }
+    function open(img) {
+      last = img;
+      lbImg.src = img.currentSrc || img.src;
+      lbImg.alt = img.alt || "";
+      var fc = img.closest("figure").querySelector("figcaption");
+      lbCap.textContent = fc ? fc.textContent.trim() : (img.alt || "");
+      setFit(img.naturalWidth > window.innerWidth);
+      lb.classList.add("open");
+      document.body.classList.add("lb-open");
+      lb.scrollTop = 0;
+    }
+    function close() {
+      lb.classList.remove("open");
+      document.body.classList.remove("lb-open");
+      lbImg.removeAttribute("src");
+      if (last) { last.focus && last.focus(); last = null; }
+    }
+    figs.forEach(function (img) {
+      var fig = img.closest("figure");
+      img.addEventListener("click", function () {
+        if (!fig.classList.contains("missing")) open(img);
+      });
+      var fc = fig.querySelector("figcaption");
+      if (fc && !fc.querySelector(".zoom-hint")) {
+        var h = document.createElement("span");
+        h.className = "zoom-hint";
+        h.textContent = "click to enlarge";
+        fc.appendChild(document.createTextNode(" "));
+        fc.appendChild(h);
+      }
+    });
+    fitBtn.addEventListener("click", function (ev) { ev.stopPropagation(); setFit(!fitted); });
+    lb.querySelector("[data-close]").addEventListener("click", function (ev) { ev.stopPropagation(); close(); });
+    lb.addEventListener("click", close);
+    document.addEventListener("keydown", function (ev) {
+      if (ev.key === "Escape" && lb.classList.contains("open")) close();
+    });
+  }
 })();

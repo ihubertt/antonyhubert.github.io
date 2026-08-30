@@ -1,130 +1,94 @@
-# What to upload — current state
+# Upload sheet
 
-**Everything is in `site/`.** It is complete: 5 pages, 16 figures, 6 videos, 5 poster
-frames, CV in PDF and Word. Total **11 MB**. Nothing is missing.
+Everything lives in this `site` folder. It is complete and self-contained:
+**51 files, 12 MB.** Nothing is missing, and every image, video, stylesheet and
+download referenced by the pages has been checked to exist.
 
 ---
 
-## The one action
+## The upload
 
-1. Open the `site` folder. Press **Ctrl + H** to show hidden files.
-2. Click inside, press **Ctrl + A** — **16 items**.
-3. Repo page → **Add file** → **Upload files** → drag the selection in.
-4. Commit message: `Figures, videos, CV and build-video slot`
+1. Open the `site` folder. Press **Ctrl + H** so hidden files appear.
+   You should count **16 items**.
+2. Click inside the folder, press **Ctrl + A**.
+3. On your repository page: **Add file** → **Upload files**, then drag the selection in.
+4. Commit message: `Full portfolio: 5 projects, figures, videos, CV`
 5. **Commit changes.**
 
-Same-named files overwrite. Folders merge. Drag the **contents** of `site`, not the
-folder itself — `index.html` must land at the repo root.
+Same-named files overwrite the old ones. Folders merge. That is what you want.
 
-> GitHub's web uploader takes up to 100 files / 25 MB per commit. This is 30 asset files plus 10 at root
-> and 11 MB, so it fits in one go.
+> **Drag the contents of `site`, not the `site` folder itself.** `index.html` has to land
+> at the top level of the repository or nothing loads.
+
+**If the upload stalls**, do it in two commits. Videos are 8.5 MB of the 12 MB total:
+> First commit: everything except `assets/video`
+> Second commit: open `assets/video` in the repo, then Add file → Upload files
 
 ---
 
-## Everything that changed
+## What you are uploading
 
-**Seven code files edited — all must go up:**
-
-| File | Change |
-|---|---|
-| `index.html` | Hero (still + video layers), portrait beside the summary, corrected alt text |
-| `projects.html` | All figures wired; captions rewritten to match the real images; **VID-F build-video slot** added to Project 02; new "Manufacture" results row |
-| `research.html` | Figures wired; FIG-13 caption rewritten to explain the dashed reference lines |
-| `expertise.html` | **FIG-02 process-chain figure** added |
-| `cv.html` | Portrait avatar; **Word download button** added alongside the PDF |
-| `css/style.css` | Hero layering, portrait and avatar styles, mobile table stacking rebuilt |
-| `js/site.js` | Hero falls back to the still; video slots probed by HEAD request |
-
-**`assets/` — 30 files:**
+**Pages and code (10 items)**
 
 ```
-assets/
-├── Antony_Hubert_CV_2026.pdf      2 pages, A4, with portrait
-├── Antony_Hubert_CV_2026.docx     same, Word format
-├── Antony_Hubert_CV_2026_ATS.pdf  same, no portrait — for automated portals
-├── img/    17 figures + 6 poster frames  (2.7 MB)
-└── video/  6 videos                      (8.5 MB)
+index.html  projects.html  research.html  expertise.html  cv.html
+css/style.css      all styling, light and dark, print stylesheet
+js/site.js         asset fallbacks and click-to-enlarge
+.nojekyll          required. Hidden file. Without it GitHub breaks the site.
+.gitignore  robots.txt  sitemap.xml
 ```
 
----
+**assets/ (35 files)**
 
-## Hero: resolved
+| Group | Count | Notes |
+|---|---|---|
+| `assets/*.pdf` and `.docx` | 3 | CV with photo, Word version, photo-free ATS version |
+| `assets/img/*.webp` | 20 | 17 figures, hero, hero-mobile, 2 portraits |
+| `assets/img/vid-*.jpg` | 5 | poster frames for the click-to-play videos |
+| `assets/video/*.mp4` | 6 | hero loop plus five project videos |
 
-The video stays. Your own 12.9 s edit of the smoke test is now the hero, re-encoded to
-web spec (1.7 MB, 30 fps, audio stripped, faststart).
+**Notes for you (3 files)** — these do not appear on the site. GitHub will render
+`README.md` on the repository home page.
 
-The specimen photographs are no longer buried behind it — they are now **FIG-15** on the
-Projects page, immediately before the verification section of Project 01: the labelled
-FeSi6.5 sample matrix, the sectioned samples in resin, and the mounts prepared for
-microscopy. That is a better home for them than a hero anyway; there they are evidence,
-not decoration.
-
----
-
-## Videos in place
-
-| File | Duration | Size | Where |
-|---|---|---|---|
-| `hero.mp4` | 12.9 s | 1.7 MB | Home hero, muted loop *(your edit)* |
-| `vid-b-remelting.mp4` | 34.6 s | 320 KB | Project 01, method explainer *(your replacement)* |
-| `vid-c-cyclic.mp4` | 6.5 s | 41 KB | Project 01, banner strip |
-| `vid-d-smoketest.mp4` | 26.1 s | 3.8 MB | Project 02, validation |
-| `vid-e-process.mp4` | 8.9 s | 143 KB | Research, PBF-LB/M explainer |
-| `vid-f-printing.mp4` | 19.8 s | 2.6 MB | Project 02, manufacture step |
-
----
-
-## Language and readability pass
-
-The portfolio now reads for an international audience. All German-language terms are
-translated; every technical acronym is expanded on first use **on each page**, because
-each page is a separate landing point from search:
-
-| Was | Now |
-|---|---|
-| Verfahrensentwicklung / Werkstoffkunde / Konstruktion & FEM/CFD / Fertigungsnähe / Wissenstransfer | Process Development / Materials Characterisation / Design & Simulation / Hands-On Manufacturing / Knowledge Transfer |
-| Masterarbeit (7 uses) | Master's Thesis |
-| Design (Konstruktion) · CFD analysis (Strömungssimulation) | Design · CFD analysis |
-| ANSYS Mechanical / APDL (FEM-Analyse) | ANSYS Mechanical / APDL (FEA) |
-| CGPA 8.5 / 10 | CGPA 8.5 / 10 (Indian scale, 10 = highest) |
-| Hochschule Aalen — LAZ | Hochschule Aalen (Aalen University of Applied Sciences) — LAZ |
-
-PBF-LB/M, DfAM, DoE, SEM, AFM, DMLS and CFD are now spelled out at first appearance on
-every page. The Research page opens with a one-line plain-English definition of the
-process for readers who have never seen a powder-bed machine.
-
-## The CV
-
-`Antony_Hubert_CV_2026.pdf` — 2 pages, A4, portrait top-right:
-
-- Single column, no tables, no text boxes, no graphics, no header/footer
-- Standard section headings (PROFESSIONAL SUMMARY, CORE COMPETENCIES, PROFESSIONAL
-  EXPERIENCE, EDUCATION, PUBLICATION, CERTIFICATIONS, LANGUAGES)
-- Contact details as plain text in the body, where parsers look for them
-- Dates in MM/YYYY – MM/YYYY throughout
-- Arial / Liberation Sans, embedded, fully selectable — 98 lines extract cleanly
-- Keyword density verified: PBF-LB/M ×7, ANSYS ×4, CATIA ×3, SEM ×3, Taguchi ×2,
-  Minitab ×2, Siemens NX ×2
-- **Gas circulation project now spans both roles**, as it actually did: begun under
-  Working Student (requirements, CATIA geometry, ANSYS Fluent analysis), completed under
-  Academic Research Assistant (platform heating, manufacture, integration, commissioning).
-  The Projects page carries the same correction.
-
-The `.docx` is the same document. Some ATS still parse Word more reliably than PDF —
-send the `.docx` when a portal offers the choice, the PDF when emailing a human.
-
-The editable source is `Antony_Hubert_CV_2026.fodt` in the project root. Edit it, then:
-
-```bash
-soffice --headless --convert-to pdf --outdir . Antony_Hubert_CV_2026.fodt
+```
+README.md   PUBLISH.md   UPLOAD-VIA-BROWSER.md
 ```
 
 ---
 
-## Before you commit
+## Latest corrections included
 
-- [ ] **Clear the lab and machine material with Prof. Riegel.** The repo is public and
-      it now includes the specimen-mount hero, the process strip, the ALC2 build
-      footage and the smoke-test rig.
-- [ ] `.nojekyll` must be in the upload. It is hidden — Ctrl + H.
-- [ ] Do not add raw footage. Only the compressed files already in `assets/video/`.
+- Project 05 figures: the furnace and dilatometer photographs were stored rotated 90°
+  anticlockwise and are now upright.
+- The two thermal expansion charts are no longer cropped. Titles, y-axis labels and all
+  tick values are visible, and the caption now notes that the two charts use different
+  y-axis scales.
+- The ATS explanation line has been removed from the CV page.
+- `hero-poster.jpg` deleted. The hero video already uses `hero.webp` as its poster, so
+  the file was doing nothing.
+
+---
+
+## After it goes live
+
+Check these five pages and click one figure to confirm the enlarge overlay works:
+
+```
+/                /projects.html    /research.html
+/expertise.html  /cv.html
+```
+
+A green tick next to your commit means the deploy finished. A 404 usually means it is
+still building; give it another minute.
+
+---
+
+## Two things before you commit
+
+- **The repository is public.** Clear the lab and machine material with Prof. Riegel
+  first: the specimen photographs, the process strip, the ALC2 and TruPrint footage, the
+  smoke-test rig, and the SmartPro programme diagram, which is Hochschule Aalen material
+  rather than yours.
+- **`.nojekyll` must be in the upload.** It is hidden, so press Ctrl + H before selecting.
+  If your browser refuses to upload it, create it directly on GitHub: Add file → Create
+  new file → name it `.nojekyll` → put a `#` in the body → commit.
