@@ -220,6 +220,17 @@ figure { margin: 0 0 1.75rem; }
 figure img, figure video { width: 100%; height: auto; display: block; border-radius: var(--radius); background: #fff; border: 1px solid var(--border); }
 figcaption { margin-top: .65rem; font-size: .86rem; color: var(--text-muted); line-height: 1.5; }
 
+/* ---------- Figure source references ---------- */
+
+.refs { display: block; margin-top: .45rem; font-size: .8rem; color: var(--text-faint); line-height: 1.6; }
+.refs a {
+  display: inline-block; margin-right: .35rem; padding: 0 .28rem;
+  border: 1px solid var(--border); border-radius: 3px;
+  font-variant-numeric: tabular-nums; text-decoration: none;
+}
+.refs a:hover { background: var(--accent-soft); border-color: var(--accent); }
+.refs .src { border: 0; padding: 0; margin-right: .25rem; color: var(--text-faint); }
+
 /* ---------- Click-to-zoom ---------- */
 
 figure[data-slot] img { cursor: zoom-in; }
