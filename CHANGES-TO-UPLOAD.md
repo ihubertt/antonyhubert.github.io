@@ -6,6 +6,45 @@ download referenced by the pages has been checked to exist.
 
 ---
 
+## CV rebuilt for ATS screening
+
+Three files replace the previous two. All single column, no tables, no graphics in the
+text flow, UTF-8 PDF, MM/YYYY dates with en-dash, no unexplained gaps.
+
+| File | Use it for |
+|---|---|
+| `Antony_Hubert_CV_2026.pdf` | **Primary.** No photo. Upload this to every online portal. |
+| `Antony_Hubert_CV_2026.docx` | Same content in Word, for portals that prefer .docx |
+| `Antony_Hubert_CV_2026_Photo.pdf` | Direct email and speculative applications |
+| `Antony_Hubert_Lebenslauf_2026.pdf` | German-language applications |
+
+Positioning widened from additive-manufacturing specialist to **Development, Process
+Engineering, Design and Simulation**, matching the roles you are actually applying to.
+Keyword density checked: CATIA 6, ANSYS 6, CAM 7, CFD 5, PBF-LB/M 5, PTC Creo 4, CNC 4,
+Siemens NX 3, FEA 3, Fluent 3.
+
+Removed: Minitab, the colleague's name on the thermal project, and
+"AI-assisted engineering (Anthropic Claude)". Corrected: 60% roughness reduction and
+0.152% porosity, replacing the 99% density and 38% figures.
+
+Added as short project lines: thermal expansion of AlSi10Mg, the shielding-gas system,
+the camera mounting bracket, sustainable product development, and the ASBC concept
+vehicle. Plus volunteering and the student coordinator role.
+
+The German Lebenslauf uses the headings German recruiters and parsers expect:
+Profil, Kenntnisse, Berufserfahrung, Ausbildung, Projekte, Publikation, Sprachen,
+Weiterbildungen und Zertifikate, Ehrenamt und Engagement. Language levels are given as
+Verhandlungssicher, Gute Kenntnisse and Muttersprache.
+
+## Site changes
+
+- "Open to relocation worldwide" is now **"Open to Relocation"**, 19 instances across
+  all five pages.
+- `sitemap.xml`, `robots.txt` and the canonical tag now point at your live address,
+  `https://ihubertt.github.io/antonyhubert.github.io/`, instead of a root domain you do
+  not own. An `og:url` tag was added to match.
+- The CV page now offers four downloads instead of three.
+
 ## The upload
 
 1. Open the `site` folder. Press **Ctrl + H** so hidden files appear.

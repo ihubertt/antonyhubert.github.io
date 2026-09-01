@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://antonyhubert.github.io/sitemap.xml
+Sitemap: https://ihubertt.github.io/antonyhubert.github.io/sitemap.xml
