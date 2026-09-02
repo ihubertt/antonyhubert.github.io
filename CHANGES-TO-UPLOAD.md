@@ -43,8 +43,13 @@ README.md  PUBLISH.md  UPLOAD-VIA-BROWSER.md  CHANGES-TO-UPLOAD.md   (notes, not
 ## Changed this round
 
 **New portrait** across the site and all three CVs, cropped three ways from the 1024×1024
-original: `portrait.webp` (840×1120, Home page), `portrait-square.webp` (600×600, circular
-avatar on both CV pages), and a 420×525 crop embedded in the CV PDFs.
+original: `portrait-v2.webp` (840×1120, both home pages), `portrait-square-v2.webp`
+(600×600, circular avatar on both CV pages), and a 420×525 crop embedded in the CV PDFs.
+
+The filenames carry `-v2` on purpose. Reusing the old names meant browsers kept serving
+the cached previous photo; a new filename forces a fresh fetch for everyone, including
+anyone who has visited before. **Delete the two old files from the repo after uploading**:
+`assets/img/portrait.webp` and `assets/img/portrait-square.webp`.
 
 CV location lines now read **73430 Aalen**, matching the site.
 
