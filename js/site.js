@@ -132,7 +132,7 @@
       if (fc && !fc.querySelector(".zoom-hint")) {
         var h = document.createElement("span");
         h.className = "zoom-hint";
-        h.textContent = "click to enlarge";
+        h.textContent = "Click on the image to enlarge";
         fc.appendChild(document.createTextNode(" "));
         fc.appendChild(h);
       }
