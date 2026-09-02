@@ -42,6 +42,13 @@ README.md  PUBLISH.md  UPLOAD-VIA-BROWSER.md  CHANGES-TO-UPLOAD.md   (notes, not
 
 ## Changed this round
 
+**New portrait** across the site and all three CVs, cropped three ways from the 1024×1024
+original: `portrait.webp` (840×1120, Home page), `portrait-square.webp` (600×600, circular
+avatar on both CV pages), and a 420×525 crop embedded in the CV PDFs.
+
+CV location lines now read **73430 Aalen**, matching the site.
+
+
 **Home page**
 - Three hero figures removed from the top of the site.
 - They now sit as **result bands inside the work they describe**. Project 01 carries
