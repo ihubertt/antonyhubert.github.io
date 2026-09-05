@@ -1,114 +1,43 @@
-# Upload sheet
+# Changes to upload — 05 September 2026
 
-Everything is in this `site` folder: **54 files, 12 MB, 17 top-level items.**
-Verified before packaging: 7 pages, 44 local references, **zero missing**, zero unused
-assets, no phone number on any page, "73430 Aalen" on all 7 pages, and 5 live hyperlinks
-in each of the three CV PDFs.
+Two changes: Chennai, India named in the Executive summary, and languages reordered to
+German, English, Tamil everywhere.
 
----
+## HTML files to replace (7)
 
-## The upload
-
-1. Open the `site` folder. Press **Ctrl + H** so hidden files appear. Count **17 items**.
-2. Click inside, press **Ctrl + A**.
-3. On your repository page: **Add file** → **Upload files**, drag the selection in.
-4. Commit message: `German pages, result bands, clickable CV links`
-5. **Commit changes.**
-
-> Drag the **contents** of `site`, not the folder itself. `index.html` must land at the
-> top level of the repository.
-
-**Note the new `de` folder.** It contains the two German pages and must upload with the
-rest. It is a normal folder, not hidden, so Ctrl + A will pick it up.
-
-**If the upload stalls**, split it in two: everything except `assets/video` first, then
-open `assets/video` in the repo and upload the six MP4s separately. Video is 8.5 MB of
-the 12 MB.
-
----
-
-## What is in it
-
-```
-index.html  projects.html  research.html  expertise.html  cv.html
-de/index.html  de/cv.html                    German home page and CV page
-css/style.css   js/site.js
-.nojekyll  .gitignore  robots.txt  sitemap.xml
-assets/    3 CVs + 1 Word file · 21 images · 5 poster frames · 6 videos
-README.md  PUBLISH.md  UPLOAD-VIA-BROWSER.md  CHANGES-TO-UPLOAD.md   (notes, not the site)
-```
-
----
-
-## Changed this round
-
-**New portrait** across the site and all three CVs, cropped three ways from the 1024×1024
-original: `portrait-v2.webp` (840×1120, both home pages), `portrait-square-v2.webp`
-(600×600, circular avatar on both CV pages), and a 420×525 crop embedded in the CV PDFs.
-
-The filenames carry `-v2` on purpose. Reusing the old names meant browsers kept serving
-the cached previous photo; a new filename forces a fresh fetch for everyone, including
-anyone who has visited before. **Delete the two old files from the repo after uploading**:
-`assets/img/portrait.webp` and `assets/img/portrait-square.webp`.
-
-CV location lines now read **73430 Aalen**, matching the site.
-
-
-**Home page**
-- Three hero figures removed from the top of the site.
-- They now sit as **result bands inside the work they describe**. Project 01 carries
-  ~60% / 0.152% / Procedia CIRP. Co-Cr carries 2.8% / 10x / 9 of 27. The gas system
-  carries 4 m/s / <200 ppm / CAD to CFD to built. The thermal project carries
-  30 / 300 °C / 400 °C. Research gets a four-figure publication band.
-- Location reads **73430 Aalen, Germany** everywhere.
-- **Phone number removed from all five English pages.** Kept on the CVs.
-
-**German pages, new**
-- `de/index.html` and `de/cv.html`, with a **DE / EN switch in the header of all seven
-  pages**. Projects, Research and Expertise stay in English.
-- Both German pages state the language position openly:
-  *"Ein offenes Wort zu meinem Deutsch: derzeit B1, die B2-Prüfung ist für Dezember 2026
-  angesetzt. Fachliche Gespräche führe ich sicher auf Englisch und arbeite mich im
-  deutschsprachigen Umfeld konsequent weiter ein."*
-- `hreflang` tags both ways; both pages added to `sitemap.xml`.
-
-**Figures**
-- FIG-15 middle panel rotated 180°.
-- Zoom hint now reads **"Click on the image to enlarge"**.
-- Source references with clickable [7], [8], [13], [14] links on the Research page.
-
-**CVs**
-- All three carry **live hyperlinks**: LinkedIn, portfolio URL, publication DOI, email
-  and phone are real PDF link annotations.
-- Phone kept. The website is public and gets scraped; a CV goes to one named employer,
-  where a missing number can cost you the call.
-
-| File | Use it for |
+| Repository path | What changed |
 |---|---|
-| `Antony_Hubert_CV_2026.pdf` | **Primary.** No photo. Every online portal. |
-| `Antony_Hubert_CV_2026.docx` | Portals that prefer Word |
-| `Antony_Hubert_CV_2026_Photo.pdf` | Direct email and speculative applications |
-| `Antony_Hubert_Lebenslauf_2026.pdf` | German-language applications |
+| `index.html` | Executive summary now says "two industry roles in Chennai, India". Footer language order. |
+| `de/index.html` | "zwei Jahre Industrieerfahrung in Chennai, Indien". Footer language order. |
+| `cv.html` | Languages row reordered: German, English, Tamil. Footer language order. |
+| `de/cv.html` | Sprachen row reordered: Deutsch, Englisch, Tamil. Footer language order. |
+| `expertise.html` | Languages table rows reordered: German, English, Tamil. Footer language order. |
+| `projects.html` | Footer language order only. |
+| `research.html` | Footer language order only. |
 
----
+## CV files to replace (4)
 
-## After it goes live
+| Repository path |
+|---|
+| `assets/Antony_Hubert_CV_2026.pdf` |
+| `assets/Antony_Hubert_CV_2026_Photo.pdf` |
+| `assets/Antony_Hubert_Lebenslauf_2026.pdf` |
+| `assets/Antony_Hubert_CV_2026.docx` |
 
-Check these seven pages, click one figure to confirm the enlarge overlay opens, and use
-the DE / EN switch once in each direction:
+All four now list **German first**, then English, then Tamil. Nothing else in the CVs changed.
 
-```
-/                /projects.html   /research.html   /expertise.html   /cv.html
-/de/index.html   /de/cv.html
-```
+## How to upload
 
----
+1. Open the repository on github.com.
+2. `Add file` → `Upload files`, drag the 7 HTML files in (keep `de/index.html` and
+   `de/cv.html` inside the `de` folder — drag the whole `de` folder to preserve the path).
+3. Repeat for the 4 files into `assets/`.
+4. Commit to `main`. GitHub Pages redeploys in about a minute.
 
-## Two things before you commit
+The CV filenames are unchanged, so anyone holding an old link still gets the new file.
+Browsers may cache the PDFs — force-refresh with Ctrl+Shift+R to confirm.
 
-- **The repository is public.** Clear the lab and machine material with Prof. Riegel:
-  the specimen photographs, the process strip, the ALC2 and TruPrint footage, the
-  smoke-test rig, and the SmartPro diagram, which is Hochschule Aalen material.
-- **`.nojekyll` must be in the upload.** It is hidden, so press Ctrl + H before selecting.
-  If your browser refuses to upload it: Add file → Create new file → name it `.nojekyll`
-  → put a `#` in the body → commit.
+## Still open from earlier rounds
+
+- Delete `assets/img/portrait.webp` and `assets/img/portrait-square.webp` (superseded by the `-v2` files).
+- Confirm `.nojekyll` is present at the repository root.
