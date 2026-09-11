@@ -1,3 +1,25 @@
+# Changes to upload — 11 September 2026
+
+All contradictions with the job applications are fixed. Upload these **11 files** (same names, same folders):
+
+| Folder | Files |
+|---|---|
+| `site/` (top level) | `index.html`, `cv.html`, `expertise.html`, `projects.html`, `research.html` |
+| `site/de/` | `index.html`, `cv.html` |
+| `site/assets/` | `Antony_Hubert_Lebenslauf_2026.pdf`, `Antony_Hubert_CV_2026.pdf`, `Antony_Hubert_CV_2026_Photo.pdf`, `Antony_Hubert_CV_2026.docx` |
+
+What changed everywhere: name order **Hubert Antony**; "Job-seeker residence permit (§ 20 AufenthG) / Aufenthaltserlaubnis zur
+Arbeitsplatzsuche" instead of "Visa / Visum"; no final grade; "co-developed / Mitentwicklung" instead of "led / Leitung";
+German shown as B1 with B2 course from October 2026, then C1 (planned); Procedia CIRP paper under the research-assistant role,
+~60 % result under the Master's thesis. The 38 % figure on projects/research stays: it is the final-layer remelting result (60 % = cyclic).
+The German Lebenslauf is new, in Europass structure.
+
+File names are unchanged, so every existing link keeps working. Originals are backed up in `../backup/` (outside `site/`, do not upload).
+Master files for future edits: `ai-job-search/cv/Lebenslauf_Hubert_Antony_Europass_Portfolio.docx`,
+`ai-job-search/cv/Antony_Hubert_CV_2026_EN.docx`, `ai-job-search/cv/Antony_Hubert_CV_2026_EN_Photo.docx`.
+
+---
+
 # Changes to upload — 05 September 2026
 
 Two changes: Chennai, India named in the Executive summary, and languages reordered to
