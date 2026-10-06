@@ -145,3 +145,62 @@
     });
   }
 })();
+
+/* ---------------------------------------------------------------------------
+   3. Scroll reveal. Sections fade up once as they enter the viewport.
+      The .js class is set by an inline script in <head>, so nothing is ever
+      hidden for a reader without JavaScript. prefers-reduced-motion is
+      honoured in CSS.
+   4. Scrollspy. The sticky subnav highlights the section you are reading.
+--------------------------------------------------------------------------- */
+(function () {
+  "use strict";
+
+  var reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---- reveal ---- */
+  var targets = document.querySelectorAll(".reveal");
+  if (!targets.length) { /* nothing to do */ }
+  else if (reduced || !("IntersectionObserver" in window)) {
+    Array.prototype.forEach.call(targets, function (el) { el.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.06 });
+    Array.prototype.forEach.call(targets, function (el) { io.observe(el); });
+    // Anything already on screen at load should not wait for a scroll.
+    window.setTimeout(function () {
+      Array.prototype.forEach.call(targets, function (el) {
+        if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add("in");
+      });
+    }, 60);
+  }
+
+  /* ---- scrollspy ---- */
+  var nav = document.querySelector(".subnav");
+  if (!nav || !("IntersectionObserver" in window)) return;
+  var links = {}, sections = [];
+  Array.prototype.forEach.call(nav.querySelectorAll('a[href^="#"]'), function (a) {
+    var id = a.getAttribute("href").slice(1);
+    var sec = document.getElementById(id);
+    if (sec) { links[id] = a; sections.push(sec); }
+  });
+  if (!sections.length) return;
+
+  var visible = {};
+  var spy = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { visible[e.target.id] = e.isIntersecting ? e.intersectionRatio : 0; });
+    var best = null, bestVal = 0;
+    sections.forEach(function (s) {
+      var v = visible[s.id] || 0;
+      if (v > bestVal) { bestVal = v; best = s.id; }
+    });
+    Object.keys(links).forEach(function (id) {
+      if (id === best) links[id].setAttribute("aria-current", "true");
+      else links[id].removeAttribute("aria-current");
+    });
+  }, { rootMargin: "-120px 0px -55% 0px", threshold: [0, 0.15, 0.4, 0.75, 1] });
+  sections.forEach(function (s) { spy.observe(s); });
+})();

@@ -80,7 +80,7 @@ route (no terminal), or [`PUBLISH.md`](PUBLISH.md) for the git command-line rout
 
 ### CV → `assets/`
 
-`Antony_Hubert_CV_2026.pdf` — linked from every footer and twice on the CV page.
+`Hubert_Antony_CV_2026.pdf` — linked from every footer and twice on the CV page.
 
 Compression commands for all of the above are in `MEDIA-PLAN.md` §4.
 Install ffmpeg first: `sudo apt install ffmpeg`

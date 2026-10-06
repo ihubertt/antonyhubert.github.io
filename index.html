@@ -10,10 +10,91 @@
 <meta property="og:title" content="Hubert Antony — Metal Additive Manufacturing Engineer">
 <meta property="og:description" content="PBF-LB/M process development for soft magnetic alloys. ~60% roughness reduction at 0.152% porosity. Published in Procedia CIRP (2024).">
 <meta property="og:type" content="profile">
+<link rel="alternate" hreflang="de" href="https://ihubertt.github.io/antonyhubert.github.io/de/index.html">
+<link rel="alternate" hreflang="en" href="https://ihubertt.github.io/antonyhubert.github.io/index.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+<script>document.documentElement.className+=" js";</script>
 <link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Person",
+ "name": "Hubert Antony",
+ "givenName": "Hubert",
+ "familyName": "Antony",
+ "honorificSuffix": "M.Sc.",
+ "jobTitle": "Mechanical Engineer — Metal Additive Manufacturing",
+ "description": "M.Sc. mechanical engineer specialising in Laser Powder Bed Fusion (PBF-LB/M) process development for soft magnetic and biomedical alloys.",
+ "url": "https://ihubertt.github.io/antonyhubert.github.io/",
+ "image": "https://ihubertt.github.io/antonyhubert.github.io/assets/img/portrait-v2.webp",
+ "email": "mailto:antonyhubert03@gmail.com",
+ "address": {
+  "@type": "PostalAddress",
+  "postalCode": "73430",
+  "addressLocality": "Aalen",
+  "addressCountry": "DE"
+ },
+ "alumniOf": [
+  {
+   "@type": "CollegeOrUniversity",
+   "name": "Hochschule Aalen — Aalen University of Applied Sciences",
+   "sameAs": "https://www.hs-aalen.de/"
+  },
+  {
+   "@type": "CollegeOrUniversity",
+   "name": "Jeppiaar Institute of Technology, Chennai"
+  }
+ ],
+ "knowsAbout": [
+  "Laser Powder Bed Fusion",
+  "PBF-LB/M",
+  "Additive Manufacturing",
+  "Design for Additive Manufacturing",
+  "FeSi6.5 soft magnetic alloys",
+  "AlSi10Mg",
+  "Cobalt-Chromium alloys",
+  "Materials characterisation",
+  "Metallography",
+  "Surface metrology",
+  "ANSYS Fluent",
+  "ANSYS Mechanical",
+  "CATIA V5",
+  "Siemens NX",
+  "PTC Creo",
+  "Design of Experiments",
+  "Taguchi method",
+  "Minitab",
+  "CNC machining"
+ ],
+ "knowsLanguage": [
+  {
+   "@type": "Language",
+   "name": "German",
+   "alternateName": "de"
+  },
+  {
+   "@type": "Language",
+   "name": "English",
+   "alternateName": "en"
+  },
+  {
+   "@type": "Language",
+   "name": "Tamil",
+   "alternateName": "ta"
+  }
+ ],
+ "sameAs": [
+  "https://www.linkedin.com/in/antony-hubert",
+  "https://doi.org/10.1016/j.procir.2024.08.060"
+ ],
+ "seeks": {
+  "@type": "Demand",
+  "name": "Process, application or R&D engineering role in metal additive manufacturing"
+ }
+}
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -24,7 +105,7 @@
     <nav class="nav" aria-label="Main">
       <a href="index.html" aria-current="page">Home</a>
       <a href="projects.html">Projects</a>
-      <a href="research.html">Research</a>
+      <a href="research.html">Publication</a>
       <a href="expertise.html">Expertise</a>
       <a href="cv.html">CV</a>
     </nav>
@@ -40,7 +121,7 @@
     <div class="hero-media">
       <picture>
         <source media="(max-width: 700px)" srcset="assets/img/hero-mobile.webp">
-        <img src="assets/img/hero.webp" alt="Metallographic specimen mount labelled FeSi 6.5, Hubert Exp. 6, with sample pairs 1.1+1.2, 2.1+2.2, 3.1+3.2">
+        <img fetchpriority="high" src="assets/img/hero.webp" alt="Metallographic specimen mount labelled FeSi 6.5, Hubert Exp. 6, with sample pairs 1.1+1.2, 2.1+2.2, 3.1+3.2" width="2400" height="1350">
       </picture>
       <video autoplay muted loop playsinline poster="assets/img/hero.webp"
              aria-label="Smoke-flow validation of 3D-printed inlet gas nozzles for a PBF-LB/M build chamber">
@@ -62,7 +143,16 @@
     </div>
   </section>
 
-<section class="section">
+  <section class="proof" aria-label="Headline results">
+    <div class="wrap-wide">
+      <div class="proof-item"><span class="n">~60%</span><span class="l">smoother printed surface on FeSi6.5<br>Sa 4.55 → 1.8 µm</span></div>
+      <div class="proof-item"><span class="n">0.152%</span><span class="l">residual porosity — effectively<br>full density, held across the window</span></div>
+      <div class="proof-item"><span class="n">2024</span><span class="l">peer-reviewed in <a href="https://doi.org/10.1016/j.procir.2024.08.060"><em>Procedia CIRP</em></a></span></div>
+      <div class="proof-item"><span class="n">100+</span><span class="l">engineers trained across five<br>CAD and CAE platforms</span></div>
+    </div>
+  </section>
+
+<section class="section reveal">
     <div class="wrap">
       <h2>Executive summary</h2>
       <div class="split">
@@ -72,39 +162,34 @@
       <p>I am looking for a team where I can keep doing that: take a process nobody has made repeatable, and make it repeatable.</p>
       </div>
       <figure class="portrait">
-        <img src="assets/img/portrait-v2.webp" alt="Portrait photograph of Hubert Antony">
+        <img loading="lazy" decoding="async" src="assets/img/portrait-v2.webp" alt="Portrait photograph of Hubert Antony" width="840" height="1120">
         <figcaption>Hubert Antony, M.Sc. — 73430 Aalen, Germany. Open to Relocation.</figcaption>
       </figure>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section reveal">
     <div class="wrap">
       <h2>What I deliver to an engineering team</h2>
-      <div class="table-wrap">
-        <table class="t-key stack">
-          <tbody>
-                        <tr><td data-label="Area">Process Development</td><td data-label="Detail">I turn a material nobody has a recipe for into a documented, repeatable process.</td></tr>
-            <tr><td data-label="Area">Materials Characterisation</td><td data-label="Detail">I run my own lab work: sectioning, polishing, microscopy, surface measurement. No waiting on an external lab.</td></tr>
-            <tr><td data-label="Area">Design &amp; Simulation</td><td data-label="Detail">CATIA, NX and Creo, validated in ANSYS. I have designed, simulated, built and fitted hardware to a working machine.</td></tr>
-            <tr><td data-label="Area">Design &amp; Creativity</td><td data-label="Detail">I sketch concepts by hand and take form cues from nature, then design around how a person actually uses the thing (certified in Applied Ergonomics). Hand rendering is basic; in CAD I can bring a design fully to life. <a href="projects.html#cammount">See a small example</a>.</td></tr>
-            <tr><td data-label="Area">Hands-On Manufacturing</td><td data-label="Detail">Four-axis CNC and reverse engineering. I design parts that can actually be made.</td></tr>
-            <tr><td data-label="Area">Knowledge Transfer</td><td data-label="Detail">A peer-reviewed publication, and 100+ engineers trained across five CAD platforms. I document as I go.</td></tr>
-          </tbody>
-        </table>
+      <div class="skills">
+        <div class="skill"><b>Process development</b><span>I turn a material nobody has a recipe for into a documented, repeatable process.</span></div>
+        <div class="skill"><b>Materials characterisation</b><span>I run my own lab work: sectioning, polishing, microscopy, surface measurement. No waiting on an external lab.</span></div>
+        <div class="skill"><b>Design &amp; simulation</b><span>CATIA, NX and Creo, validated in ANSYS. I have designed, simulated, built and fitted hardware to a working machine.</span></div>
+        <div class="skill"><b>Design &amp; creativity</b><span>I sketch concepts by hand and take form cues from nature, then design around how a person actually uses the thing (certified in Applied Ergonomics). <a href="projects.html#cammount">See a small example</a>.</span></div>
+        <div class="skill"><b>Hands-on manufacturing</b><span>Four-axis CNC and reverse engineering. I design parts that can actually be made.</span></div>
+        <div class="skill"><b>Knowledge transfer</b><span>A peer-reviewed publication, and 100+ engineers trained across five CAD platforms. I document as I go.</span></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
+  <section class="section reveal">
     <div class="wrap">
       <h2>Featured projects</h2>
       <p class="muted">Three projects, each taken from problem statement through method to quantified result.</p>
       <div class="cards">
 
-        <a class="card card-link" href="projects.html#fesi">
-          <div class="thumb"><img src="assets/img/fig-03.webp" alt="Etched cross-sections comparing every-layer cyclic remelting with normal build-up"></div>
+        <a class="card card-link reveal" href="projects.html#fesi">
+          <div class="thumb"><img loading="lazy" decoding="async" src="assets/img/fig-03.webp" alt="Etched cross-sections comparing every-layer cyclic remelting with normal build-up" width="1130" height="985"></div>
           <div class="card-body">
             <p class="kicker">Master's Thesis · Process development</p>
             <h3>In-process laser remelting for FeSi6.5 soft magnetic components</h3>
@@ -113,8 +198,8 @@
           </div>
         </a>
 
-        <a class="card card-link" href="projects.html#gasflow">
-          <div class="thumb"><img src="assets/img/fig-08.webp" alt="Inlet gas nozzle component as-built with supports, finished, and integrated on the machine"></div>
+        <a class="card card-link reveal d1" href="projects.html#gasflow">
+          <div class="thumb"><img loading="lazy" decoding="async" src="assets/img/fig-08.webp" alt="Inlet gas nozzle component as-built with supports, finished, and integrated on the machine" width="1700" height="619"></div>
           <div class="card-body">
             <p class="kicker">Machine development · CFD</p>
             <h3>Inlet gas circulation system for a PBF-LB/M research machine</h3>
@@ -123,8 +208,8 @@
           </div>
         </a>
 
-        <a class="card card-link" href="projects.html#cocr">
-          <div class="thumb"><img src="assets/img/fig-05.webp" alt="AFM pore distribution maps of Co-Cr at the best and worst parameter sets of the L9 array"></div>
+        <a class="card card-link reveal d2" href="projects.html#cocr">
+          <div class="thumb"><img loading="lazy" decoding="async" src="assets/img/fig-05.webp" alt="AFM pore distribution maps of Co-Cr at the best and worst parameter sets of the L9 array" width="1700" height="868"></div>
           <div class="card-body">
             <p class="kicker">B.E. thesis · Taguchi DoE</p>
             <h3>Porosity minimisation in laser-sintered cobalt-chromium for medical implants</h3>
@@ -149,7 +234,7 @@
         <p>If you are developing metal AM processes, qualifying parameter sets, building or improving PBF-LB/M systems, or bringing additively manufactured components into series production, I would welcome a technical conversation.</p>
         <div class="btn-row">
           <a class="btn" href="mailto:antonyhubert03@gmail.com">Request a technical discussion</a>
-          <a class="btn ghost" href="assets/Antony_Hubert_CV_2026.pdf">Download CV (PDF)</a>
+          <a class="btn ghost" href="assets/Hubert_Antony_CV_2026.pdf">Download CV (PDF)</a>
         </div>
         <p class="small muted">Full parameter studies, micrographs, topography data and build documentation are available on request.</p>
       </div>
