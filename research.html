@@ -102,7 +102,7 @@
           <p class="lede">Electric motors lose energy to eddy currents. The standard fix is lamination: stack thin, individually insulated steel sheets so the current has no continuous path to flow along.</p>
           <p>FeSi6.5 is the best alloy for that job &mdash; up to <strong>30% lower core losses</strong> than conventional silicon steel. It is also so brittle that it shatters in a rolling mill, so it cannot be made into sheet, so almost nobody uses it. The industry designs motors around what the mill can produce rather than what the magnetic circuit wants.</p>
           <p>3D printing never asks the material to survive being bent or stamped, so it removes that barrier &mdash; but it introduces a new one. Printed surfaces are rough, and a rough layer needs a thicker insulating coat, which makes the laminations thicker, which brings the eddy-current losses straight back.</p>
-          <p><strong>What this paper shows:</strong> re-melting each layer with the laser a second time, in a controlled heat regime, makes the surface roughly <strong>60% smoother</strong> without introducing pores or cracks &mdash; smooth enough to carry an ultra-thin insulating layer. Doing it repeatedly turns out to control the metal&rsquo;s internal grain structure as well.</p>
+          <p><strong>What this paper shows:</strong> remelting the top layer with a widened laser beam, in the gentle heat-conduction regime, makes it <strong>38% smoother</strong> in a single pass. Repeating the pass during the build brings the surface down to <strong>Sa 1.77 µm</strong>, the precision needed for thin insulating layers. Remelting does not change how the brittle alloy cracks, and it only slightly modifies its grain structure.</p>
         </div>
         <div>
           <figure data-slot="VID-E" class="wide">
@@ -115,10 +115,10 @@
       </div>
 
       <div class="band four">
-        <div><span class="n">~60%</span><span class="l">areal roughness reduction<br>Sa 4.55 µm &rarr; 1.8 µm</span></div>
-        <div><span class="n">&lt;1.0 µm</span><span class="l">linear roughness Ra<br>from over 2.5 µm</span></div>
-        <div><span class="n">0.152%</span><span class="l">porosity<br>full density retained</span></div>
-        <div><span class="n">0</span><span class="l">cracked or delaminated<br>specimens</span></div>
+        <div><span class="n">38.3%</span><span class="l">lower roughness, one pass<br>Sa 4.55 µm &rarr; 2.81 µm</span></div>
+        <div><span class="n">1.77 µm</span><span class="l">Sa with every-layer remelting<br>more than 41% below its reference</span></div>
+        <div><span class="n">4.5 kW/mm²</span><span class="l">beam intensity for remelting<br>down from 59 kW/mm²</span></div>
+        <div><span class="n">0.152%</span><span class="l">porosity at the<br>optimised build point</span></div>
       </div>
     </section>
 
@@ -147,11 +147,11 @@
       <div class="split stackfig">
         <div>
           <h3>1 &mdash; The surface gets dramatically smoother</h3>
-          <p>Cyclic in-process remelting, held in a stable conduction melt regime, reduced areal roughness from <strong>Sa 4.55 µm to ~1.8 µm</strong> and linear roughness from <strong>Ra above 2.5 µm to below 1.0 µm</strong> &mdash; at full density, with no cracking or delamination in any sample.</p>
+          <p>A single remelting pass with a 300 µm beam at 325 W and 800 mm/s cut the top-layer roughness from <strong>Sa 4.55 µm to 2.81 µm (38.3%)</strong>. Built into the process cyclically, the same exposure reached <strong>Sa 1.77 µm</strong> with every layer, more than 41% below the reference parts in the same build, and <strong>Sa 1.81 µm</strong> with every fifth layer. In the thesis, tactile Ra fell below 1.0 µm with every-layer remelting.</p>
 
-          <h3>2 &mdash; Grain structure becomes a setting, not an outcome</h3>
-          <p>This is the novel part. Remelting is normally used simply to densify a part. Applied <em>repeatedly</em>, it becomes a way to engineer the microstructure: each re-melt disrupts directional solidification, driving a <strong>columnar-to-equiaxed grain transition</strong> continuously through the height of the part.</p>
-          <p>The <em>frequency</em> is the control knob. Remelting every layer gives a full transition; every third layer at 600 mm/s gives a partial one; every fifth layer gives essentially none. The grain structure becomes something you dial in.</p>
+          <h3>2 &mdash; A wider beam changes the melt regime</h3>
+          <p>The build-up runs at about <strong>59 kW/mm²</strong> in the deep-penetration regime, with melt tracks about 259 µm deep, more than six layer heights. Defocusing to a 300 µm beam cut the average intensity to <strong>4.5 kW/mm²</strong>. Up to 350 W the remelt then stays in a stable <strong>heat-conduction regime</strong>, only 52-82 µm deep, and the scan tracks flow together into a closed, homogeneous surface. From 375 W heat builds up and the process flips back towards deep penetration.</p>
+          <p>Every-layer remelting slightly modifies the grain structure, with sporadic epitaxial grain growth across several tracks and layers.</p>
         </div>
         <div>
           <figure data-slot="FIG-13">
@@ -169,8 +169,8 @@
           </figure>
         </div>
         <div>
-          <h3>3 &mdash; It does not make the alloy brittle</h3>
-          <p>The decisive negative result. Heating and cooling a brittle alloy over and over should crack it. It did not. Every specimen stayed dense and crack-free and held its dimensions. Without this result the method would be a curiosity rather than a process.</p>
+          <h3>3 &mdash; Remelting does not change how the alloy cracks</h3>
+          <p>FeSi6.5 shows sporadic cracks in the layer surface, and remelting neither adds to them nor removes them; they are what limits the achievable surface quality. Remelting every layer also rounds the part edges and builds up material at the contour. Remelting every fifth layer gives almost the same surface with less loss of accuracy, which makes it the practical setting.</p>
 
           <h3>4 &mdash; Two effects that look like one, separated</h3>
           <p>Molten metal building up at the part edges scales with <strong>power intensity</strong>. How deep the remelt reaches scales with <strong>areal energy intensity</strong>. Treating them as two separate levers is what made a stable processing window achievable &mdash; a single volumetric energy density figure blends them together and cannot resolve the trade-off.</p>
@@ -188,7 +188,7 @@
                 <tr><td data-label="Sector">E-mobility &amp; traction drives</td><td data-label="Application">Laminated rotor and stator geometries with lower eddy-current losses — including internal cooling channels and topology-optimised flux paths that sheet stacking cannot produce</td></tr>
                 <tr><td data-label="Sector">Transformers &amp; inductors</td><td data-label="Application">High-silicon-iron cores in geometries unavailable to conventional lamination</td></tr>
                 <tr><td data-label="Sector">Electrical machine development</td><td data-label="Application">Rapid iteration of magnetic-circuit geometry with no lamination tooling — a genuine functional prototype route</td></tr>
-                <tr><td data-label="Sector">Metal AM process engineering</td><td data-label="Application">Conduction-regime cyclic remelting transfers to any alloy where layer topography, surface finish, internal interface quality or grain morphology is the governing requirement</td></tr>
+                <tr><td data-label="Sector">Metal AM process engineering</td><td data-label="Application">Heat-conduction cyclic remelting transfers to any alloy where layer topography, surface finish or internal interface quality is the governing requirement</td></tr>
                 <tr><td data-label="Sector">Brittle-alloy processing generally</td><td data-label="Application">A scalable AM route for materials that cannot survive conventional forming</td></tr>
               </tbody>
             </table>

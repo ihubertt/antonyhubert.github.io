@@ -1,6 +1,10 @@
-# Upload instructions — 06 October 2026
+# Upload instructions — updated 21 October 2026
 
-Everything from today's work, as one list. **16 files to add or replace, 4 to delete.**
+Everything from the work so far, as one list. **16 files to add or replace, 4 to delete.**
+
+> **Latest round (21 October 2026)** — four CV documents, `index.html`, `cv.html`,
+> `expertise.html`, `de/index.html` and `de/cv.html` were all rebuilt. They are already
+> in the staging folders below, so just follow the same steps; nothing new to find.
 
 ---
 
@@ -70,6 +74,24 @@ Drag both folders so the paths are preserved.
 - **Expertise:** every self-assigned level removed. 42 capabilities in a two-column evidence grid, plus 26 machines and software titles as tag chips. 9.4 → 6.9 screens; on a phone, 19.8 → 10.2.
 - **German:** `de/projekte.html` added — all five projects in full German.
 - Scroll-reveal animation throughout, disabled for anyone who has reduced motion switched on.
+
+### Added 21 October 2026
+
+- **Freelance CAD / CAE Trainer, self-employed, May 2024 – present** is now the first
+  entry in Experience on the CV page, the German CV page, all four CV documents and the
+  timeline on the one-page site. Creo, CATIA V5 and ANSYS; trainees in India, Germany and
+  further afield; the client network traced back to CADD Centre Training Services.
+- **Career break stated plainly**, as a dated line inside that entry: *"Family care,
+  Nov 2025 – Apr 2026: relocated to India to care for my mother during a serious illness,
+  and continued this training work remotely at a reduced load."* Because the freelance work
+  continued throughout, the timeline has no gap in it anywhere.
+- **Reverse engineering** now appears in both roles, correctly distinguished: *taught as a
+  course* at CADD Centre, *applied to reproduce legacy parts* at Axis Automation.
+- **Applied Ergonomics certificate corrected** to **NPTEL / IIT Kanpur, Jan – Apr 2020**.
+  Every page and every one of your earlier CVs said *IIT Madras, 2020*. It was also missing
+  from the CV documents entirely — it is in all four of them now.
+- Profile paragraph and the "Knowledge transfer" card now mention the freelance teaching,
+  so the top of the CV matches the top of the experience list.
 
 ### Accuracy corrections
 - **SEM removed everywhere.** It was listed as a capability and inside your Master's thesis description.

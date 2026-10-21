@@ -67,8 +67,8 @@
 
       <div class="glance">
         <p class="role">Master&rsquo;s thesis <span class="dot">·</span> sole investigator <span class="dot">·</span> Hochschule Aalen, LaserApplication Center <span class="dot">·</span> submitted 09/2025</p>
-        <p class="outcome">A conduction-regime laser remelting strategy that smooths FeSi6.5 layer topography and converts columnar grains to equiaxed &mdash; at full density, in an alloy too brittle to roll or stamp.</p>
-        <ul><li><span class="n">~60%</span><span class="l">smoother surface<br>Sa 4.55 &rarr; 1.8 µm</span></li><li><span class="n">0.152%</span><span class="l">residual porosity</span></li><li><span class="n">2024</span><span class="l">peer-reviewed,<br><em>Procedia CIRP</em></span></li></ul>
+        <p class="outcome">A heat-conduction laser remelting strategy that smooths the FeSi6.5 layer surface for thin insulating layers, in an alloy too brittle to roll or stamp.</p>
+        <ul><li><span class="n">38.3%</span><span class="l">smoother top layer, one pass<br>Sa 4.55 &rarr; 2.81 µm</span></li><li><span class="n">1.77 µm</span><span class="l">Sa with every-layer<br>cyclic remelting</span></li><li><span class="n">2024</span><span class="l">peer-reviewed,<br><em>Procedia CIRP</em></span></li></ul>
       </div>
 
       <p class="facts">
@@ -87,8 +87,8 @@
         </div>
         <div>
           <figure data-slot="FIG-03">
-            <img loading="lazy" decoding="async" src="assets/img/fig-03.webp" alt="Four etched cross-section micrographs: every-layer cyclic remelting on the left showing equiaxed grains, normal build-up on the right showing columnar grains, with 100 and 40 micrometre scale bars" width="1130" height="985">
-            <figcaption>Etched cross-sections — every-layer cyclic remelting (left) against normal build-up (right). Columnar grains give way to a continuous equiaxed structure. Sa 4.55 µm → 1.8 µm, at full density.</figcaption>
+            <img loading="lazy" decoding="async" src="assets/img/fig-03.webp" alt="Four etched cross-section micrographs: every-layer cyclic remelting on the left, normal build-up on the right, with 100 and 40 micrometre scale bars" width="1130" height="985">
+            <figcaption>Etched cross-sections: every-layer cyclic remelting (left) against normal build-up (right). Remelting every layer slightly modifies the grain structure, with sporadic epitaxial grain growth across several tracks and layers.</figcaption>
           </figure>
           <figure data-slot="VID-B" class="wide">
             <video controls preload="none" poster="assets/img/vid-b-poster.jpg">
@@ -135,7 +135,7 @@
         <li><strong>Areal topography:</strong> KEYENCE VR-3100 one-shot 3D optical profilometer (Sa, elevation maps, line scans).</li>
         <li><strong>Tactile roughness:</strong> MarSurf M400 (Ra, Rq, Rz, Rt), measured <strong>both parallel and perpendicular to the scan vector</strong> — a directional process produces directional roughness, and a single-direction measurement would have flattered the result.</li>
         <li><strong>Cross-sections:</strong> Struers Secotom 10 sectioning and Tegramin 30 polishing parallel to the build direction, SiC 50–2000 grit, 3 µm and 1 µm diamond suspension, Co-m3 etch (20–30 s) for Fe-Si; imaged on the Zeiss Axio Imager.Z2 Vario to 500× with ZEN Core quantifying pore size, pore count/mm² and area-fraction porosity by adaptive thresholding.</li>
-        <li><strong>Process hardware:</strong> TRUMPF TruFiber 400 single-mode fibre laser (1075 nm, 400 W) · SCANLAB intelliSCANse 30 scanner · varioSCANde II 40i PR z-shifter with negative defocusing · Autodesk AMCF control · Netfabb 2024 build preparation · hema ICAM weld coaxial monitoring.</li>
+        <li><strong>Process hardware:</strong> TRUMPF TruFiber 400 single-mode fibre laser (1075 nm, 400 W) · SCANLAB intelliSCANse 30 scanner · varioSCANde II 40i PR z-shifter with negative defocusing · Autodesk AMCF control · Netfabb 2024 build preparation · hema ICAM weld camera, mounted at an angle outside the process chamber.</li>
       </ul>
       </div>
     </details>
@@ -145,15 +145,16 @@
       <div class="table-wrap">
         <table class="stack">
           <thead>
-            <tr><th scope="col">Measure</th><th scope="col">No remelting</th><th scope="col">Final-layer remelting</th><th scope="col">Cyclic remelting (every layer)</th></tr>
+            <tr><th scope="col">Measure</th><th scope="col">No remelting</th><th scope="col">Final-layer remelting</th><th scope="col">Cyclic, every layer</th><th scope="col">Cyclic, every 5th layer</th></tr>
           </thead>
           <tbody>
-            <tr><td data-label="Measure">Areal roughness Sa</td><td data-label="No remelting">~4.55 µm</td><td data-label="Final-layer">~2.4 µm</td><td data-label="Cyclic"><strong>~1.8 µm</strong></td></tr>
-            <tr><td data-label="Measure">Linear roughness Ra</td><td data-label="No remelting">&gt; 2.5 µm</td><td data-label="Final-layer">~1.5 µm</td><td data-label="Cyclic"><strong>&lt; 1.0 µm</strong></td></tr>
-            <tr><td data-label="Measure">Grain morphology</td><td data-label="No remelting">Columnar</td><td data-label="Final-layer">Partially equiaxed</td><td data-label="Cyclic"><strong>Fully equiaxed</strong></td></tr>
-            <tr><td data-label="Measure">Microstructural uniformity</td><td data-label="No remelting">Moderate</td><td data-label="Final-layer">Improved</td><td data-label="Cyclic"><strong>Excellent</strong></td></tr>
-            <tr><td data-label="Measure">Thermal stability</td><td data-label="No remelting">Good</td><td data-label="Final-layer">Stable</td><td data-label="Cyclic"><strong>Very stable</strong></td></tr>
-            <tr class="t-hi"><td data-label="Measure">Overall improvement</td><td data-label="No remelting">—</td><td data-label="Final-layer">+38% smoother</td><td data-label="Cyclic">+60% smoother</td></tr>
+            <tr><td data-label="Measure">Areal roughness Sa</td><td data-label="No remelting">4.55 µm (single-pass build) · 3.0-3.5 µm (cyclic build)</td><td data-label="Final-layer">2.81 µm</td><td data-label="Every layer"><strong>1.77 µm</strong></td><td data-label="Every 5th layer"><strong>1.81 µm</strong></td></tr>
+            <tr class="t-hi"><td data-label="Measure">Improvement against the reference in the same build</td><td data-label="No remelting">Reference</td><td data-label="Final-layer">38.3%</td><td data-label="Every layer">more than 41%</td><td data-label="Every 5th layer">almost the same as every layer</td></tr>
+            <tr><td data-label="Measure">Average beam intensity</td><td data-label="No remelting">59 kW/mm² (80 µm beam)</td><td data-label="Final-layer">4.5 kW/mm² (300 µm beam)</td><td data-label="Every layer">4.5 kW/mm²</td><td data-label="Every 5th layer">4.5 kW/mm²</td></tr>
+            <tr><td data-label="Measure">Melt regime</td><td data-label="No remelting">Deep penetration</td><td data-label="Final-layer">Heat conduction</td><td data-label="Every layer">Heat conduction</td><td data-label="Every 5th layer">Heat conduction</td></tr>
+            <tr><td data-label="Measure">Melt or remelting depth</td><td data-label="No remelting">259 µm average</td><td data-label="Final-layer">52-82 µm, about 1-2 layers</td><td data-label="Every layer">Not reported</td><td data-label="Every 5th layer">Not reported</td></tr>
+            <tr><td data-label="Measure">Grain structure</td><td data-label="No remelting">Reference</td><td data-label="Final-layer">Not reported</td><td data-label="Every layer">Slightly modified, sporadic epitaxial grain growth</td><td data-label="Every 5th layer">Not reported</td></tr>
+            <tr><td data-label="Measure">Part and layer accuracy</td><td data-label="No remelting">Reference</td><td data-label="Final-layer">Not reported</td><td data-label="Every layer">Edge rounding and material build-up at the contour</td><td data-label="Every 5th layer">Less loss of accuracy</td></tr>
           </tbody>
         </table>
       </div>
@@ -162,7 +163,7 @@
         <div>
           <figure data-slot="FIG-04">
             <img loading="lazy" decoding="async" src="assets/img/fig-04.webp" alt="Dark-field cross-section of a remelted sample, magnified melt pools with measured remelting depths, and a magnified view of the final exposed layer" width="1571" height="704">
-            <figcaption>Dark-field cross-sections at 800 and 600 mm/s, with measured remelting depths (48–96 µm here) and the resulting top layer. Across the full parameter set penetration stayed within a controlled 50–300 µm band.</figcaption>
+            <figcaption>Dark-field cross-sections at 800 and 600 mm/s, with measured remelting depths (48-96 µm here) and the resulting top layer. In the stable heat-conduction regime the published remelting depth is 52-82 µm, about one to two layer heights.</figcaption>
           </figure>
         </div>
         <div>
@@ -170,11 +171,10 @@
           <div class="table-wrap">
             <table class="t-key stack">
               <tbody>
-                <tr><td data-label="Metric">Porosity at the optimised build point</td><td data-label="Result"><strong>0.152%</strong> — essentially full density</td></tr>
-                <tr><td data-label="Metric">Remelting depth, controlled range</td><td data-label="Result">50–300 µm, stable and reproducible across intervals</td></tr>
-                <tr><td data-label="Metric">Cracking / delamination</td><td data-label="Result">None observed in any cyclically remelted sample</td></tr>
-                <tr><td data-label="Metric">Embrittlement</td><td data-label="Result">No increase, despite repeated thermal cycling of a brittle alloy</td></tr>
-                <tr><td data-label="Metric">Dimensional accuracy</td><td data-label="Result">Maintained</td></tr>
+                <tr><td data-label="Metric">Porosity at the optimised build point (300 W, 800 mm/s, before remelting)</td><td data-label="Result"><strong>0.152%</strong></td></tr>
+                <tr><td data-label="Metric">Onset of instability</td><td data-label="Result">From 375 W the remelt switches back to deep penetration and reaches the build-up melt depth</td></tr>
+                <tr><td data-label="Metric">Cracking</td><td data-label="Result">Sporadic cracks in the FeSi6.5 layer surface; remelting neither adds to them nor prevents them</td></tr>
+                <tr><td data-label="Metric">Practical setting</td><td data-label="Result">Remelting every 5th layer: almost the same surface as every layer, with less loss of part accuracy</td></tr>
                 <tr><td data-label="Metric">Parameter combinations characterised</td><td data-label="Result">30+, across three experimental phases</td></tr>
               </tbody>
             </table>
@@ -184,7 +184,7 @@
 
       <div class="note">
         <span class="label">The finding that matters</span>
-        <p>Remelting is normally used to raise density. Applied every layer it does something else: it repeatedly disrupts directional solidification, turning columnar grains into a continuous equiaxed structure through the full part height. Frequency is the control. Every layer gives full transition, every 3rd layer partial, every 5th essentially none. That is a dial an engineer can set.</p>
+        <p>The lever is the beam, not the power. Defocusing from an 80 µm to a 300 µm beam cut the average intensity from 59 to 4.5 kW/mm² and moved remelting from deep-penetration to heat-conduction melting. In that regime the scan tracks flow together into a closed surface while the remelt reaches only one to two layers deep. Remelting every fifth layer keeps almost all of the gain and limits the edge rounding that every-layer remelting causes.</p>
       </div>
 
       <div class="pub">
@@ -328,7 +328,7 @@
         <li><strong>Multi-method porosity quantification.</strong> Had porosity measured by <strong>micro-CT scanning</strong> and <strong>localised mass measurement</strong> at an external facility, cross-checking the two rather than relying on a single technique.</li>
         <li><strong>Nanoscale characterisation.</strong> <strong>Atomic Force Microscopy (AFM)</strong> scans, also run externally, mapped pore distribution, area, volume and perimeter per sample. I analysed the resulting data using threshold and watershed grain-detection for automated pore identification.</li>
         <li><strong>Defect-mechanism reasoning.</strong> Separated <strong>keyhole porosity</strong> (spherical, excessive energy density collapsing the vapour depression) from <strong>lack-of-fusion porosity</strong> (irregular, insufficient melt-pool overlap) — opposite ends of the energy-density scale, requiring opposite corrections.</li>
-        <li><strong>Statistical analysis.</strong> Signal-to-noise ratio analysis (smaller-the-better), ANOVA and contour-plot response surfaces, carried out in <strong>Minitab</strong>.</li>
+        <li><strong>Statistical analysis.</strong> Signal-to-noise ratio analysis (smaller-the-better), ANOVA and contour-plot response surfaces.</li>
       </ul>
       </div>
     </details>
@@ -379,13 +379,13 @@
       <div class="project-head">
         <p class="project-num">Project 04 &mdash; Side project <span class="dot">·</span> self-initiated design and build</p>
         <h2>Purpose-Built Camera Mount for a Laser Processing Head</h2>
-      <p class="facts"><strong>Where:</strong> LaserApplication Center, Hochschule Aalen &middot; <strong>When:</strong> March 2023</p>
+      <p class="facts"><strong>Where:</strong> LaserApplication Center, Hochschule Aalen &middot; <strong>When:</strong> March 2023, as a student</p>
       </div>
 
       <div class="split stackfig">
         <div>
-          <p>Watching the melt pool during a build needs the camera held in one fixed, repeatable position. The lab was using a general-purpose articulated arm: it drifted, it fouled the optics, and it had to be re-aimed at the start of every session.</p>
-          <p>So I made a dedicated one. Sketched it, modelled it, printed it in-house overnight, fitted it the next morning. The slotted arms let you set the angle once; after that it locks and stays where you put it.</p>
+          <p>Watching the melt pool during laser processing on a TRUMPF TruLaser Cell 3000 needs the camera held in one fixed, repeatable position. The lab was using a general-purpose articulated arm: it drifted, it fouled the optics, and it had to be re-aimed at the start of every session.</p>
+          <p>So I made a dedicated one: sketched it, modelled it, printed it in-house and fitted and aligned it myself, about a week from first sketch to working mount. The slotted arms let you set the angle once; after that it locks and stays where you put it.</p>
           <p class="muted small">Small project, but it is the shortest example of how I work: notice the thing everyone has stopped noticing, then fix it properly.</p>
         </div>
         <div>

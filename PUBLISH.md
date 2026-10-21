@@ -10,7 +10,7 @@ Everything below is run from the `site/` folder.
 ## Step 0 — Set your git identity (once, ever)
 
 ```bash
-git config --global user.name "Antony Hubert"
+git config --global user.name "Hubert Antony"
 ```
 
 ```bash
