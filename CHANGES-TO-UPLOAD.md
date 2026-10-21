@@ -81,6 +81,9 @@ Drag both folders so the paths are preserved.
   entry in Experience on the CV page, the German CV page, all four CV documents and the
   timeline on the one-page site. Creo, CATIA V5 and ANSYS; trainees in India, Germany and
   further afield; the client network traced back to CADD Centre Training Services.
+  The subjects are stated in full — **Creo, CATIA V5, ANSYS, GD&T, body-in-white design,
+  reverse engineering and design for 3D printing** — and worded as *taught and worked with*,
+  since the freelance work is project work as well as training.
 - **Career break stated plainly**, as a dated line inside that entry: *"Family care,
   Nov 2025 – Apr 2026: relocated to India to care for my mother during a serious illness,
   and continued this training work remotely at a reduced load."* Because the freelance work
