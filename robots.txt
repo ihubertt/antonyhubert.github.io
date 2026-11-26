@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ihubertt.github.io/antonyhubert.github.io/sitemap.xml
