@@ -1,7 +1,7 @@
-/* Antony Hubert — portfolio
+/* Hubert Antony, portfolio
    Two jobs only:
    1. Show a labelled placeholder for any figure whose asset is not in the repo yet,
-      so the site never renders a broken image. Drop the file in and it just works —
+      so the site never renders a broken image. Drop the file in and it just works:
       no HTML edit required.
    2. Same for the hero video: if it is absent, the hero collapses to a text block.
 */

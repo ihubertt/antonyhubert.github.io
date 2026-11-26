@@ -1,5 +1,5 @@
 /* ============================================================
-   Hubert Antony — luminescent understory
+   Hubert Antony: luminescent understory
    A dark ground that lights only where energy went.
    ============================================================ */
 
@@ -13,7 +13,7 @@
   --lilac:       #B98CFF;
   --root:        #B6FFB0;
   --bloom:       #F6F8FA;
-  /* text, tinted from the ground's hue — never grey */
+  /* text, tinted from the ground's hue, never grey */
   --text:        #CBD6DD;
   --text-mid:    #9FB3BC;
   --text-dim:    #93A9B3;
@@ -27,7 +27,7 @@
 }
 
 /* The world is an understory at nightfall: there is no light rendition of it.
-   A visitor who prefers light still gets AA contrast — every text colour below
+   A visitor who prefers light still gets AA contrast: every text colour below
    is measured against the loam, not softened toward it. */
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -209,7 +209,7 @@ article.project { scroll-margin-top: calc(var(--head-h, 59px) + var(--subnav-h, 
 /* ------------------------------- hero ------------------------------- */
 .hero { padding: clamp(2.2rem, 4.2vw, 3.4rem) 0 clamp(.6rem, 1.2vw, 1rem); }
 .hero-inner { display: grid; grid-template-columns: minmax(0,1fr) 264px; gap: clamp(2rem, 4vw, 3.4rem); align-items: start; }
-/* The tracked-caps line above the headline was an eyebrow — the one
+/* The tracked-caps line above the headline was an eyebrow, the one
    pattern with no brief that earns it back. The heading carries itself. */
 .hero h1 { margin-bottom: .34em; }
 .hero h1 em { color: var(--bloom); font-style: normal; text-shadow: 0 0 56px color-mix(in oklab, var(--cyan) 46%, transparent); }
@@ -359,7 +359,7 @@ figure.bleed video { width: 100%; border-radius: var(--radius); border: 1px soli
 .glance .k, .k { display: block; font-size: .72rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--text-dim); margin-bottom: .22rem; }
 .glance .v, .v { display: block; color: var(--text); font-size: .96rem; }
 /* The readings inside a glance strip are a measurement list, not prose, so
-   they carry no markers and no indent — same idiom as .proof and .metric. */
+   they carry no markers and no indent, same idiom as .proof and .metric. */
 .glance ul { list-style: none; margin: 0; padding: 0; }
 .glance li + li { margin-top: .95rem; }
 .facts { color: var(--text-dim); font-size: .9rem; letter-spacing: .02em; }
@@ -513,7 +513,7 @@ figure img { border-radius: 8px; border: 1px solid var(--line); }
    entirely; open, it is a real overlay on the loam. */
 .lb { display: none; }
 .lb.open {
-  /* Above .site-head, which is sticky at z-index 100 — a dialog that the
+  /* Above .site-head, which is sticky at z-index 100, so a dialog that the
      page chrome overlaps hides its own Close button. */
   display: block; position: fixed; inset: 0; z-index: 200;
   overflow: auto; overscroll-behavior: contain;
